@@ -53,7 +53,7 @@ switch ($function) {
                 ];
 
                 // Appel à la BDD à travers une fonction du modèle.
-                $retour = ajouteUtilisateur($bdd, $values);
+                $retour = addUser($bdd, $values);
                 
                 if ($retour) {
                     $alerte = "Inscription réussie";
@@ -71,7 +71,7 @@ switch ($function) {
         $title = "Liste des utilisateurs inscrits";
         $entete = "Voici la liste :";
         
-        $liste = recupereTousUtilisateurs($bdd);
+        $liste = findAllUsers($bdd);
         
         if(empty($liste)) {
             $alerte = "Aucun utilisateur inscrit pour le moment";

@@ -15,7 +15,7 @@ $table = "users";
  * @param string $nom
  * @return array
  */
-function rechercheParNom(PDO $bdd, string $nom): array {
+function searchByUsername(PDO $bdd, string $nom): array {
     
     $statement = $bdd->prepare('SELECT * FROM  users WHERE username = :username');
     $statement->bindParam(":username", $value);
@@ -30,7 +30,7 @@ function rechercheParNom(PDO $bdd, string $nom): array {
  * @param PDO $bdd
  * @return array
  */
-function recupereTousUtilisateurs(PDO $bdd): array {
+function findAllUsers(PDO $bdd): array {
     $query = 'SELECT * FROM users';
     return $bdd->query($query)->fetchAll();
 }
@@ -39,13 +39,17 @@ function recupereTousUtilisateurs(PDO $bdd): array {
  * Ajoute un nouvel utilisateur dans la base de données
  * @param array $utilisateur
  */
-function ajouteUtilisateur(PDO $bdd, array $utilisateur) {
+function addUser(PDO $bdd, array $utilisateur) {
     
     $query = ' INSERT INTO users (username, password) VALUES (:username, :password)';
     $donnees = $bdd->prepare($query);
     $donnees->bindParam(":username", $utilisateur['username'], PDO::PARAM_STR);
     $donnees->bindParam(":password", $utilisateur['password']);
     return $donnees->execute();
+    
+}
+
+function loginUser(PDO $bdd, array $user) {
     
 }
 
