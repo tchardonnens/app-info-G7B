@@ -75,13 +75,9 @@ h1 {
   width: 3% ;
 }
 
-.header-navbar-logo {
+.header-navbar {
   align-items: flex-start;
-
-}
-
-.header-navbar-links {
-  align-items: flex-end;
+  flex: 1 1;
 }
 
 ul {

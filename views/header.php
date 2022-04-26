@@ -21,9 +21,8 @@
     <header>
         <div class="header">
             <nav class="header-navbar">
-
                 <ul>
-                    <img src="content/Infinite_measures.gif" alt="" class="logo">
+                    <img src="content/Infinite_measures.gif" alt="">
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="index.php?cible=utilisateurs&fonction=inscription">Inscription</a></li>
                     <li><a href="index.php?cible=utilisateurs&fonction=liste">Utilisateurs</a></li>
