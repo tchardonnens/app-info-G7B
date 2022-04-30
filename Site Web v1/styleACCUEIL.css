@@ -1,0 +1,73 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: #e1f5fe; 
+}
+footer{
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background-color: #e1f5fe;
+    justify-content: space-evenly; 
+}
+.image-réseaux{
+    height: 100px;
+}
+body{
+    margin: 0;
+}
+ul{
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+}
+a {
+    margin-right: 50px;
+    color:black;
+    text-decoration:none;
+}
+article{
+    margin-top: 200px;
+}
+.images{
+    display: flex;
+    justify-content: end;
+}
+.image-logo{
+    height: 100px;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+aside{
+    display:flex;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+.GrosWaveIT{
+    display: flex;
+    block-size: 300px;
+    margin-left: 100px;
+    justify-content: center;
+    margin-top: 200px;
+}
+aside img{
+    block-size: 200px;
+}
+.element:nth-child(2){
+    margin-top: 150px;
+}
+.text{
+    height: 200px;
+    width: 500px;
+}
