@@ -5,21 +5,21 @@
  */
 
 // on inclut le fichier modèle contenant les appels à la BDD
-include('./modele/requetes.capteurs.php');
+include('./models/requests.sensors.php');
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
 if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
-    $function = "capteurs";
+    $function = "sensors";
 } else {
     $function = $_GET['fonction'];
 }
 
 switch ($function) {
     
-    case 'capteurs':
+    case 'sensors':
         //liste des capteurs enregistrés
         
-        $vue = "capteurs";
+        $vue = "sensors";
         $title = "Les capteurs";
         
         $entete = "Voici la liste des capteurs déjà enregistrés :";
@@ -32,11 +32,11 @@ switch ($function) {
         
         break;
         
-    case 'ajout':
+    case 'add':
         //Ajouter un nouveau capteur
         
         $title = "Ajouter un capteur";
-        $vue = "ajout";
+        $vue = "add";
         $alerte = false;
         
         // Cette partie du code est appelée si le formulaire a été posté
@@ -100,6 +100,6 @@ switch ($function) {
         $message = "Erreur 404 : la page recherchée n'existe pas.";
 }
 
-include ('vues/header.php');
-include ('vues/' . $vue . '.php');
-include ('vues/footer.php');
+include ('views/header.php');
+include ('views/' . $vue . '.php');
+include ('views/footer.php');

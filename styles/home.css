@@ -9,7 +9,7 @@ header{
     align-items: center;
     padding-left: auto;
     padding-right: auto;
-    height: 150px;
+    height: 12vh;
     background-color: #e1f5fe; 
 }
 footer{
@@ -24,19 +24,22 @@ body{
     margin: 0;
 }
 ul{
-    font-size: 50px;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 a {
-    margin-right: 50px;
+    margin-right: 3vw;
     color:black;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .image-logo{
-    height: 100px;
+    height: 10vh;
+    margin-left: 2vw;
 }
 section{
     display: flex;

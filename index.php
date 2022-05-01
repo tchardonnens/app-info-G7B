@@ -12,9 +12,9 @@
 ini_set('display_errors', 1);
 
 // Appel des fonctions du contrôleur
-include("controleurs/fonctions.php");
+include("controllers/functions.php");
 // Appel des fonctions liées à l'affichage
-include("vues/fonctions.php");
+include("views/functions.php");
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {
@@ -23,8 +23,8 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     
 } else {
     // Si aucun contrôleur défini en GET, on bascule sur utilisateurs
-    $url = 'utilisateurs';
+    $url = 'users';
 }
 
 // On appelle le contrôleur
-include('controleurs/' . $url . '.php');
+include('controllers/' . $url . '.php');

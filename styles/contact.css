@@ -1,0 +1,58 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: #e1f5fe; 
+}
+footer{
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background-color: #e1f5fe;
+    justify-content: space-evenly;  
+}
+.image-réseaux{
+    height: 100px;
+}
+body{
+    margin: 0;
+}
+ul{
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+}
+a {
+    margin-right: 50px;
+    color:black;
+    text-decoration:none;
+}
+                   
+.image-logo{
+    height: 100px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    border-right: solid;
+}
+.mail{
+    width: 100px;
+    vertical-align: baseline;
+}
+.message{
+    width:100px;
+}
+.coordonnées{
+    border-radius: 20px;
+    block-size: 30px;
+    background-color: gainsboro;
+    vertical-align: baseline;
+}
+article{
+    display: flex;
+    justify-content: right;
+    vertical-align: baseline;
+}
