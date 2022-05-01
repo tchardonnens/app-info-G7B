@@ -1,0 +1,18 @@
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vh;
+}
+
+.spacer {
+    padding-bottom: 10vh;
+}
+
+.no-header-style {
+    margin-right: 0;
+    color: rgb(32, 32, 142);
+    text-decoration: underline;
+}

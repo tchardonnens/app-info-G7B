@@ -1,19 +1,30 @@
-<?php 
-    require_once '../views/header.php';
-flash('login')
+<?php
+include_once 'header.php'
 ?>
-<h1 class="header">Please Lgar</h1>
 
-<form method="post" action="../controllers/users.php">
-    <input type="hidden" name="type" value="login">
-    <input type="text" name="name/email"  
-    placeholder="Username/Email...">
-    <input type="password" name="usersPwd" 
-    placeholder="Password...">
-    <button type="submit" name="submit">Log In</button>
-</form>
+<head>
+    <link rel="stylesheet" href="../styles/login.css" />
+</head>
 
-<div class="form-sub-msg"><a href="./reset-password.php">Forgotten Password?</a></div>
+<div class="full-page">
+<div class="column-container">
+    <h1 class="header">Veuillez vous connecter</h1>
 
+    <form method="post" action="../controllers/users.php" class="column-container">
+        <input type="hidden" name="type" value="login">
+        <input type="text" name="email" placeholder="Email">
+        </br>
+        <input type="password" name="password" placeholder="Mot de passe">
+        </br>
+        <button type="submit" name="submit">Connexion</button>
+    </form>
+    <div class="spacer"></div>
+    <a href="./reset-password.php" class="no-header-style">Mot de passe oublié ?</a>
 
-<p><a href="index.php">Retour</a></p>
+    <p><a href="home.php" class="no-header-style">Retour</a></p>
+</div>
+</div>
+
+<?php
+include_once 'footer.php'
+?>

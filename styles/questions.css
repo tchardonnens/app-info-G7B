@@ -1,14 +1,12 @@
 section p{
     text-align: center;
 }
-.titre{
-    font-size: 3vh;
-    text-align: center;
-}
 .question{
     font-size: x-large;
     font-display: 100px;
     color: rgb(59, 59, 152);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     background-color: #e1f5fe;
     text-align: center;
 }

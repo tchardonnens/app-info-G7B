@@ -1,38 +1,3 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;
-    background-color: #e1f5fe; 
-}
-footer{
-    display: flex;
-    align-items: center;
-    height: 150px;
-    background-color: #e1f5fe;
-    justify-content: space-evenly;  
-}
-.image-réseaux{
-    height: 100px;
-}
-body{
-    margin: 0;
-}
-ul{
-    font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    align-items: center;
-}
-a {
-    margin-right: 50px;
-    color:black;
-    text-decoration:none;
-}
-                   
-.image-logo{
-    height: 100px;
-}
 section{
     display: flex;
     justify-content: center;
