@@ -23,7 +23,7 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     
 } else {
     // Si aucun contrôleur défini en GET, on bascule sur utilisateurs
-    $url = 'users';
+    $url = 'sensors';
 }
 
 // On appelle le contrôleur

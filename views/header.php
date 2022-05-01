@@ -24,9 +24,9 @@
                 <ul>
                     <img src="content/Infinite_measures.gif" alt="">
                     <li><a href="index.php">Accueil</a></li>
-                    <li><a href="index.php?cible=utilisateurs&fonction=inscription">Inscription</a></li>
-                    <li><a href="index.php?cible=utilisateurs&fonction=liste">Utilisateurs</a></li>
-                    <li><a href="index.php?cible=capteurs">Capteurs</a></li>
+                    <li><a href="index.php?cible=users&fonction=signup">Inscription</a></li>
+                    <li><a href="index.php?cible=users&fonction=list">Utilisateurs</a></li>
+                    <li><a href="index.php?cible=sensors">Capteurs</a></li>
                 </ul>
             </nav>
         </div>

@@ -46,4 +46,4 @@
 <?php echo AfficheAlerte($alerte); ?>
 
 
-<p><a href="index.php?cible=capteurs">Retour</a> | <a href="index.php">Accueil</a></p>
+<p><a href="index.php?cible=sensors">Retour</a> | <a href="index.php">Accueil</a></p>
