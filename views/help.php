@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../styles/legal.css" />
 </head>
 <section>
-    <p class="titre"> Service Après-Vente</p>
+    <h1>SAV</h1>
     <p class="question">Suivi du produit</p></br>
     <p class="answer">Nous suivons chaque produit de près afin de garder un maximum de contrôle sur sa livraison</p></br>
     <p class="question">Remboursement</p></br>

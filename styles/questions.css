@@ -1,6 +1,12 @@
 section p{
     text-align: center;
 }
+
+h1{
+    text-align: center;
+    color: rgb(59, 59, 152);
+
+}
 .question{
     font-size: x-large;
     font-display: 100px;

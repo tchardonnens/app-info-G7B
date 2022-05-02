@@ -1,9 +1,10 @@
 <?php
-include_once 'header.php'
+include_once 'header.php';
+include_once './helpers/session_helper.php';
 ?>
 
 <head>
-    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/signin.css" />
 </head>
 
 <div class="full-page">
@@ -18,10 +19,6 @@ include_once 'header.php'
         </br>
         <button type="submit" name="submit">Connexion</button>
     </form>
-    <div class="spacer"></div>
-    <a href="./reset-password.php" class="no-header-style">Mot de passe oublié ?</a>
-
-    <p><a href="home.php" class="no-header-style">Retour</a></p>
 </div>
 </div>
 

@@ -1,23 +1,43 @@
-section{
-    display: flex;
-    justify-content: center;
-    border-right: solid;
+section {
+  display: flex;
+  justify-content: center;
+  border-right: solid;
 }
-.mail{
-    width: 100px;
-    vertical-align: baseline;
+.mail {
+  width: 100px;
+  vertical-align: baseline;
 }
-.message{
-    width:100px;
+.message {
+  width: 100px;
 }
-.coordonnées{
-    border-radius: 20px;
-    block-size: 30px;
-    background-color: gainsboro;
-    vertical-align: baseline;
+article {
+  display: flex;
+  justify-content: right;
+  vertical-align: baseline;
 }
-article{
-    display: flex;
-    justify-content: right;
-    vertical-align: baseline;
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  align-content: flex-start;
+  padding-bottom: 1vh;
+}
+
+.row-container {
+  padding-top: 3%;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  align-items: flex-start;
+}
+
+.text-area {
+  height: 150px;
+  resize: none;
+}
+
+button {
+    width: 100%;
 }

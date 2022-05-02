@@ -5,8 +5,7 @@
 <head>
     <link rel="stylesheet" href="../styles/legal.css" />
 </head>
-
-<section>
+<h1>Mentions Légales</h1>
     <p class="question">Conditions générales de vente CGV</p></br>
     <p class="answer">Notre site en lui-même n’est pas exploité à des fins commerciales.</p></br>
     <p class="question">Cookies</p></br>
@@ -15,8 +14,6 @@
     <p class="question">Identification</p></br>
     <p class="answer">Notre entreprise est Wave IT et nous tenons à rester transparent avec nos clients. Pour
         toute informations sur notre identité, se rendre sur la page Contact</p></br>
-
-</section>
 
 <?php 
     include_once 'footer.php'

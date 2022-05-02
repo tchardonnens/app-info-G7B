@@ -24,7 +24,6 @@
         <ul>
             <a href="./home.php">Accueil</a>
             <a href="./challenge.php">Challenge</a>
-            <!-- <a href="../index.php?cible=sensors">Capteurs</a> -->
             <a href="./contact.php">Contact</a>
             <a href="./questions.php">FAQ</a>
             <a href="../index.php?cible=users&fonction=signup"><img src="../content/login.png" class="sign-in-logo"/></a>

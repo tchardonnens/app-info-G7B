@@ -2,8 +2,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: auto;
-  padding-right: auto;
   height: 12vh;
   background-color: #e1f5fe;
 }
@@ -14,6 +12,7 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+
 a {
   margin-right: 3vw;
   color: black;

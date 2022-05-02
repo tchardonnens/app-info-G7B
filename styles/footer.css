@@ -7,4 +7,16 @@ footer {
   height: 7vh;
 }
 
+.row-container {
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items:center;
+  align-content: center;
+}
+
+.no-header-style {
+  margin-right: 0;
+}
 

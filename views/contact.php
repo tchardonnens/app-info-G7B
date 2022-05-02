@@ -1,27 +1,27 @@
-<?php 
-    include_once 'header.php'
+<?php
+include_once 'header.php'
 ?>
 
 <head>
     <link rel="stylesheet" href="../styles/contact.css" />
 </head>
-<section>
+<div class="row-container">
+<div class="column-container">
     <img class="mail" src="../content/mail.png" />
-    <a href=#>
-        <p>
-            Contacter l’administrateur par Mail
-        </p>
-    </a>
-    <p class="coordonnées">NOM prénom</p></br>
-    <p class="coordonnées">Adresse mail</p></br>
-    <p class="coordonnées">Objet</p></br>
-    <p class="coordonnées">Message</p></br>
-</section>
-<article>
+    <p>Contacter l’administrateur par mail :</p>
+    <p style="font-weight:bold">help@infinite-measures.com</p>
+</div>
+<div class="column-container">
     <img class="message" src="../content/message.png">
     <p>Contactez l'admin sur la messagerie interne</p>
-</article>
+    <input type="text" name="object" placeholder="Objet"></br>
+    <input class="text-area" type="text" name="message" placeholder="Message"></br>
+    <button>Envoyer</button>
+</div>
+</div>
 
-<?php 
-    include_once 'footer.php'
+
+
+<?php
+include_once 'footer.php'
 ?>

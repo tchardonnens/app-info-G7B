@@ -19,51 +19,44 @@
 
             //Init data
             $data = [
-                'usersName' => trim($_POST['usersName']),
-                'usersEmail' => trim($_POST['usersEmail']),
-                'usersUid' => trim($_POST['usersUid']),
-                'usersPwd' => trim($_POST['usersPwd']),
+                'name' => trim($_POST['name']),
+                'mail' => trim($_POST['mail']),
+                'password' => trim($_POST['password']),
                 'pwdRepeat' => trim($_POST['pwdRepeat'])
             ];
 
             //Validate inputs
-            if(empty($data['usersName']) || empty($data['usersEmail']) || empty($data['usersUid']) || 
-            empty($data['usersPwd']) || empty($data['pwdRepeat'])){
+            if(empty($data['name']) || empty($data['mail']) || empty($data['password']) || empty($data['pwdRepeat'])){
                 flash("register", "Please fill out all inputs");
                 redirect("./views/signup.php");
             }
 
-            if(!preg_match("/^[a-zA-Z0-9]*$/", $data['usersUid'])){
-                flash("register", "Invalid username");
-                redirect("./views/signup.php");
-            }
-
-            if(!filter_var($data['usersEmail'], FILTER_VALIDATE_EMAIL)){
+            if(!filter_var($data['mail'], FILTER_VALIDATE_EMAIL)){
                 flash("register", "Invalid email");
                 redirect("./views/signup.php");
             }
 
-            if(strlen($data['usersPwd']) < 6){
+            if(strlen($data['password']) < 6){
                 flash("register", "Invalid password");
                 redirect("./views/signup.php");
-            } else if($data['usersPwd'] !== $data['pwdRepeat']){
+            } else if($data['password'] !== $data['pwdRepeat']){
                 flash("register", "Passwords don't match");
                 redirect("./views/signup.php");
             }
 
             //User with the same email or password already exists
-            if($this->userModel->findUserByEmailOrUsername($data['usersEmail'], $data['usersName'])){
-                flash("register", "Username or email already taken");
+            if($this->userModel->findUserByEmail($data['mail'])){
+                flash("register", "Email already taken");
                 redirect("./views/signup.php");
             }
 
             //Passed all validation checks.
             //Now going to hash password
-            $data['usersPwd'] = password_hash($data['usersPwd'], PASSWORD_DEFAULT);
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
             //Register User
             if($this->userModel->register($data)){
-                redirect("./views/login.php");
+                redirect("./views/signin.php");
             }else{
                 die("Something went wrong");
             }
@@ -75,44 +68,43 @@
 
         //Init data
         $data=[
-            'name/email' => trim($_POST['name/email']),
-            'usersPwd' => trim($_POST['usersPwd'])
+            'email' => trim($_POST['email']),
+            'password' => trim($_POST['password'])
         ];
 
-        if(empty($data['name/email']) || empty($data['usersPwd'])){
+        if(empty($data['email']) || empty($data[''])){
             flash("login", "Please fill out all inputs");
-            header("location: ./views/login.php");
+            header("location: ./views/signin.php");
             exit();
         }
 
         //Check for user/email
-        if($this->userModel->findUserByEmailOrUsername($data['name/email'], $data['name/email'])){
+        if($this->userModel->findUserByEmail($data['email'])){
             //User Found
-            $loggedInUser = $this->userModel->login($data['name/email'], $data['usersPwd']);
+            $loggedInUser = $this->userModel->login($data['email'], $data['password']);
             if($loggedInUser){
                 //Create session
                 $this->createUserSession($loggedInUser);
             }else{
                 flash("login", "Password Incorrect");
-                redirect("./views/login.php");
+                redirect("./views/signin.php");
             }
         }else{
             flash("login", "No user found");
-            redirect("./views/login.php");
+            redirect("./views/signin.php");
         }
     }  
 
     public function createUserSession($user){
-        $_SESSION['usersId'] = $user->usersId;
-        $_SESSION['usersName'] = $user->usersName;
-        $_SESSION['usersEmail'] = $user->usersEmail;
+        $_SESSION['id_user'] = $user->id_user;
+        $_SESSION['mail'] = $user->mail;
         redirect("./views/home.php");
     }
 
     public function logout(){
-        unset($_SESSION['usersId']);
-        unset($_SESSION['usersName']);
-        unset($_SESSION['usersEmail']);
+        unset($_SESSION['id_user']);
+        unset($_SESSION['name']);
+        unset($_SESSION['mail']);
         session_destroy();
         redirect("./views/home.php");
     }
@@ -139,7 +131,7 @@
                 $init->logout();
                 break;
             default:
-            redirect("./views/login.php");
+            redirect("./views/signup.php");
         }
     }
 

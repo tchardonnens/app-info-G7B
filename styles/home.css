@@ -4,6 +4,13 @@
 body {
   margin: 0;
 }
+
+h1{
+  text-align: center;
+  color: rgb(59, 59, 152);
+
+}
+
 section {
   display: flex;
   justify-content: space-between;
@@ -19,8 +26,8 @@ aside {
   justify-content: space-around;
 }
 p {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 200;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
@@ -48,5 +55,15 @@ aside img {
   flex-direction: column;
   margin-top: 150px;
 }
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 @media screen and (max-width: 1280px) {
 }
