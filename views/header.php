@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <img class="image-logo" src="../content/wave-it-blue.jpg" />
+        <img class="image-logo" src="../content/InfiniteMeasures.png" />
 
         <ul>
             <a href="./home.php">Accueil</a>
