@@ -7,7 +7,7 @@ include_once 'header.php'
 </head>
 <section>
     <article>
-        <img src="../content/wave-it-white.png" />
+        <img src="../content/InfiniteMeasures.png" />
     </article>
     <aside>
         <div class="mesures">
