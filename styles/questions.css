@@ -1,6 +1,7 @@
 section p{
     text-align: center;
 }
+
 h1{
     text-align: center;
     color: rgb(59, 59, 152);
@@ -10,6 +11,8 @@ h1{
     font-size: x-large;
     font-display: 100px;
     color: rgb(59, 59, 152);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     background-color: #e1f5fe;
     text-align: center;
 }

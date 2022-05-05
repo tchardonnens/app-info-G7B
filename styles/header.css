@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  background-color: #e1f5fe;
+}
+
+ul {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  margin-right: 3vw;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.image-logo {
+  height: 10vh;
+  margin-left: 2vw;
+}
+
+.sign-in-logo {
+  height: 5vh;
+}
