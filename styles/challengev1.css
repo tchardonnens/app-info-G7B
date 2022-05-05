@@ -1,0 +1,56 @@
+noms{
+    display: flex;
+    background-color: rgb(47, 178, 47);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-around;
+}
+equipe1{
+    display:flex;
+    background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+equipe2{
+    display:flex;
+    background-color: rgb(253, 48, 48);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: center;
+}
+equipe3{
+    display:flex;
+    background-color: rgb(251, 95, 95);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left:60px;
+    margin-right: 60px;
+    align-items: center;
+}
+equipe4{
+    display:flex;
+    background-color: rgb(251, 128, 128);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    align-items: center;
+}
+equipe5{
+    display:flex;
+    background-color: rgb(253, 184, 184);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+}
