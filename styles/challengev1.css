@@ -20,32 +20,32 @@ equipe1,equipe2,equipe3,equipe4,equipe5{
 equipe1{
     background-color: red;
     margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 equipe2{
     background-color: rgb(253, 50, 50);
     margin-top: 5px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 equipe3{
     background-color: rgb(255, 100, 100);
     margin-top: 5px;
-    margin-left:100px;
-    margin-right: 100px;
+    margin-left:120px;
+    margin-right: 120px;
 }
 equipe4{
     background-color: rgb(255, 150, 150);
     margin-top: 5px;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 160px;
+    margin-right: 160px;
 }
 equipe5{
     background-color: rgb(255, 200, 200);
     margin-top: 5px;
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 a{
     text-decoration:none;
