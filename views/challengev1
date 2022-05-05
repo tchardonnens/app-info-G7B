@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="challengev1.css"/>
+        <title>Challenge</title>
+    </head>
+<noms>
+    <p>Rang</p>
+    <p>Equipe</p>
+    <p>Score</p>
+    <p>Evolution</p>
+</noms>
+
+<equipe1 href="./equipe1.php"></a>
+    <p>1</p>
+    <p></p>
+    <p></p>
+    <p></p>
+</equipe1>
+
+<equipe2 href="./equipe2.php">
+    <p>2</p>
+    <p></p>
+    <p></p>
+    <p></p>
+</equipe2>
+
+<equipe3 href="./equipe3.php">
+    <p>3</p>
+    <p></p>
+    <p></p>
+    <p></p>
+</equipe3>
+
+<equipe4 href="./equipe4.php">
+    <p>4</p>
+    <p></p>
+    <p></p>
+    <p></p>
+</equipe4>
+
+<equipe5 href="./equipe5.php">
+    <p>5</p>
+    <p></p>
+    <p></p>
+    <p></p>
+</equipe5>
+
+    
