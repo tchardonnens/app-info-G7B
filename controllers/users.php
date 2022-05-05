@@ -3,6 +3,7 @@
     require_once '../models/user.php';
     require_once '../helpers/session_helper.php';
 
+
     class Users {
 
         private $userModel;
@@ -25,7 +26,6 @@
                 'pwdRepeat' => trim($_POST['pwdRepeat'])
             ];
 
-            //Validate inputs
             if(empty($data['mail']) || empty($data['password']) || empty($data['pwdRepeat'])){
                 flash("register", "Please fill out all inputs");
                 redirect("./views/signup.php");
@@ -56,7 +56,9 @@
 
             //Register User
             if($this->userModel->register($data)){
+
                 redirect("../views/signin.php");
+
             }else{
                 die("Something went wrong");
             }
