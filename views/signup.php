@@ -1,15 +1,15 @@
 <?php
-	include_once 'header.php';
-	include_once '../helpers/session_helper.php';
+include_once 'helpers/session_helper.php';
 ?>
 
 <head>
-	<link rel="stylesheet" href="../styles/signup.css" />
+	<link rel="stylesheet" href="styles/signup.css" />
 </head>
-<?php flash('register') ?>
 
-<form method="POST" action="../controllers/users.php" class="column-container">
-	<input type="hidden" name="type" value="register">
+
+<form method="POST" action="index.php?cible=users&function=signup" class="column-container">
+	<?php flash('signup') ?>
+	<input type="hidden" name="type" value="signup">
 	<h1>Inscription</h1>
 
 	<label>Prénom :</label>
@@ -31,10 +31,4 @@
 </form>
 <div class="spacer">
 
-</div><a href="./signin.php" class="no-header-style">Déjà un compte ?</a>
-
-
-
-<?php
-include_once 'footer.php';
-?>
+</div><a href="index.php?cible=users&function=signin" class="no-header-style">Déjà un compte ?</a>

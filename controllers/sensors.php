@@ -8,10 +8,10 @@
 include('./models/requests.sensors.php');
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
-if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
+if (!isset($_GET['function']) || empty($_GET['function'])) {
     $function = "sensors";
 } else {
-    $function = $_GET['fonction'];
+    $function = $_GET['function'];
 }
 
 switch ($function) {

@@ -1,9 +1,6 @@
-<?php 
-    include_once 'header.php'
-?>
 
 <head>
-    <link rel="stylesheet" href="../styles/legal.css" />
+    <link rel="stylesheet" href="styles/legal.css" />
 </head>
 <h1>Mentions Légales</h1>
     <p class="question">Conditions générales de vente CGV</p></br>
@@ -15,6 +12,3 @@
     <p class="answer">Notre entreprise est Wave IT et nous tenons à rester transparent avec nos clients. Pour
         toute informations sur notre identité, se rendre sur la page Contact</p></br>
 
-<?php 
-    include_once 'footer.php'
-?>

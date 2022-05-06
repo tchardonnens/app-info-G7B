@@ -1,34 +1,37 @@
-<?php
-include_once 'header.php'
-?>
-
 <head>
-    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
 </head>
+<h1 id="index-text">Welcome, <?php if(isset($_SESSION['name'])){
+        echo explode(" ", $_SESSION['name'])[0];
+    }else{
+        echo 'Guest';
+    } 
+    ?> </h1>
 <section>
+    
     <article>
-        <img src="../content/wave-it-white.png" />
+        <img src="./content/wave-it-white.png" />
     </article>
     <aside>
         <div class="mesures">
             <div class="element">
-                <img src="../content/noise.png" />
+                <img src="./content/noise.png" />
                 <p>Sonore</p>
                 </br></br></br></br>
-                <img src="../content/cardiac.png" />
+                <img src="./content/cardiac.png" />
                 <p>Rythme cardiaque</p>
             </div>
 
             <div class="element">
-                <img src="../content/co2.png" />
+                <img src="./content/co2.png" />
                 <p>CO2</p>
             </div>
 
             <div class="element">
-                <img src="../content/temperature.png" />
+                <img src="./content/temperature.png" />
                 <p>Température</p>
                 </br></br></br></br>
-                <img src="../content/humidity.png" />
+                <img src="./content/humidity.png" />
                 <p>Humidité</p>
             </div>
         </div>
@@ -44,7 +47,3 @@ include_once 'header.php'
 <p class="presentation">
     Leaderboard et compétition, nous allons vous faire aimer le bien-être au travail.   
 </p>
-
-<?php
-include_once 'footer.php'
-?>

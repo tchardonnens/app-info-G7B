@@ -1,9 +1,5 @@
-<?php 
-    include_once 'header.php'
-?>
-
 <head>
-    <link rel="stylesheet" href="../styles/legal.css" />
+    <link rel="stylesheet" href="styles/legal.css" />
 </head>
 <section>
     <h1>SAV</h1>
@@ -15,7 +11,3 @@
     <p class="answer">En cas de retard de livraison du produit ou de bug du site, l’information sera communiquée dans les plus brefs délais et la livraison et réparation du site seront placés en priorité</p></br>
 
 </section>
-
-<?php 
-    include_once 'footer.php'
-?>

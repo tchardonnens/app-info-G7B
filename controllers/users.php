@@ -1,140 +1,175 @@
 <?php
-    ini_set('display_errors', 'on');
-    require_once '../models/user.php';
-    require_once '../helpers/session_helper.php';
+require_once './models/user.php';
+require_once './helpers/session_helper.php';
 
 
-    class Users {
+class Users
+{
 
-        private $userModel;
-        
-        public function __construct(){
-            $this->userModel = new User;
-        }
+    private $userModel;
 
-        public function register(){
-            //Process form
-            
-            //Sanitize POST data
-            $_POST = filter_input_array(INPUT_POST);
+    public function __construct()
+    {
+        $this->userModel = new User;
+    }
 
-            //Init data
-            $data = [
-                'name' => trim($_POST['name']),
-                'mail' => trim($_POST['mail']),
-                'password' => trim($_POST['password']),
-                'pwdRepeat' => trim($_POST['pwdRepeat'])
-            ];
+    public function signup()
+    {
+        //Process form
 
-            if(empty($data['mail']) || empty($data['password']) || empty($data['pwdRepeat'])){
-                flash("register", "Please fill out all inputs");
-                redirect("./views/signup.php");
-            }
-
-            if(!filter_var($data['mail'], FILTER_VALIDATE_EMAIL)){
-                flash("register", "Invalid email");
-                redirect("./views/signup.php");
-            }
-
-            if(strlen($data['password']) < 6){
-                flash("register", "Invalid password");
-                redirect("./views/signup.php");
-            } else if($data['password'] !== $data['pwdRepeat']){
-                flash("register", "Passwords don't match");
-                redirect("./views/signup.php");
-            }
-
-            //User with the same email or password already exists
-            if($this->userModel->findUserByEmail($data['mail'])){
-                flash("register", "Email already taken");
-                redirect("./views/signup.php");
-            }
-
-            //Passed all validation checks.
-            //Now going to hash password
-            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-
-            //Register User
-            if($this->userModel->register($data)){
-
-                redirect("../views/signin.php");
-
-            }else{
-                die("Something went wrong");
-            }
-        }
-
-    public function login(){
         //Sanitize POST data
         $_POST = filter_input_array(INPUT_POST);
 
         //Init data
-        $data=[
-            'email' => trim($_POST['email']),
+        $data = [
+            'name' => trim($_POST['name']),
+            'mail' => trim($_POST['mail']),
+            'password' => trim($_POST['password']),
+            'pwdRepeat' => trim($_POST['pwdRepeat'])
+        ];
+
+        if (empty($data['mail']) || empty($data['password']) || empty($data['pwdRepeat'])) {
+            flash("signup", "Please fill out all inputs");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        if (!filter_var($data['mail'], FILTER_VALIDATE_EMAIL)) {
+            flash("signup", "Invalid email");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        if (strlen($data['password']) < 6) {
+            flash("signup", "Invalid password");
+            redirect("index.php?cible=users&function=signup");
+        } else if ($data['password'] !== $data['pwdRepeat']) {
+            flash("signup", "Passwords don't match");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        //User with the same email or password already exists
+        if ($this->userModel->findUserByEmail($data['mail'])) {
+            flash("signup", "Email already taken");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        //Passed all validation checks.
+        //Now going to hash password
+        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+        //Register User
+        if ($this->userModel->signup($data)) {
+
+            redirect("index.php?cible=infos&function=home");
+        } else {
+            die("Something went wrong");
+        }
+    }
+
+    public function signin()
+    {
+        //Sanitize POST data
+        $_POST = filter_input_array(INPUT_POST);
+
+        //Init data
+        $data = [
+            'mail' => trim($_POST['mail']),
             'password' => trim($_POST['password'])
         ];
 
-        if(empty($data['email']) || empty($data[''])){
-            flash("login", "Please fill out all inputs");
-            header("location: ../views/signin.php");
+        if (empty($data['mail']) || empty($data['password'])) {
+            flash("signin", "Veuillez remplir tous les champs");
+            header("location: index.php?cible=users&function=signin");
             exit();
         }
 
         //Check for user/email
-        if($this->userModel->findUserByEmail($data['email'])){
+        if ($this->userModel->findUserByEmail($data['mail'])) {
             //User Found
-            $loggedInUser = $this->userModel->login($data['email'], $data['password']);
-            if($loggedInUser){
+            $loggedInUser = $this->userModel->signin($data['mail'], $data['password']);
+            if ($loggedInUser) {
                 //Create session
                 $this->createUserSession($loggedInUser);
-            }else{
-                flash("login", "Password Incorrect");
-                redirect("../views/signin.php");
+                
+            } else {
+                flash("signin", "Email ou mot de passe incorrect");
+                redirect("index.php?cible=users&function=signin");
             }
-        }else{
-            flash("login", "No user found");
-            redirect("../views/signin.php");
+        } else {
+            flash("signin", "Aucun utilisateur ne correspond");
+            redirect("index.php?cible=users&function=signin");
         }
-    }  
-
-    public function createUserSession($user){
-        $_SESSION['id_user'] = $user->usersId;
-        $_SESSION['mail'] = $user->mail;
-        redirect("../views/home.php");
     }
 
-    public function logout(){
-        unset($_SESSION['id_user']);
+    public function createUserSession($user)
+    {
+        $_SESSION['mail'] = $user->mail;
+        $_SESSION['name'] = $user->name;
+        redirect("index.php?cible=infos&function=home");
+    }
+
+    public function logout()
+    {
         unset($_SESSION['name']);
         unset($_SESSION['mail']);
         session_destroy();
-        redirect("../views/home.php");
+        redirect("index.php?cible=infos&function=home");
     }
 }
 
-    $init = new Users;
+$init = new Users;
 
-    //Ensure that user is sending a post request
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        switch($_POST['type']){
-            case 'register':
-                $init->register();
-                break;
-            case 'login':
-                $init->login();
-                break;
-            default:
-            redirect("../views/home.php");
-        }
-        
-    }else{
-        switch($_GET['q']){
-            case 'logout':
-                $init->logout();
-                break;
-            default:
-            redirect("../views/signup.php");
-        }
+//Ensure that user is sending a post request
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    switch ($_POST['type']) {
+        case 'signup':
+            $init->signup();
+            break;
+        case 'signin':
+            $init->signin();
+            break;
+        default:
+            redirect("index.php?cible=infos&function=home");
     }
+} 
+if (!isset($_GET['function']) || empty($_GET['function'])) {
+    $function = "signup";
+} else {
+    $function = $_GET['function'];
+}
 
-    
+switch ($function) {
+
+    case 'home':
+        $vue = "home";
+        $title = "Accueil";
+        break;
+
+    case 'signin':
+        //affichage de l'accueil
+        $vue = "signin";
+        $title = "Connexion";
+        break;
+
+    case 'signup':
+        // inscription d'un nouvel utilisateur
+        $vue = "signup";
+        $alerte = false;
+        $title = "Inscription";
+        break;
+
+    case 'logout':
+        $init->logout();
+        break;
+
+    default:
+        // si aucune fonction ne correspond au paramètre function passé en GET
+        $vue = "error404";
+        $title = "error404";
+        $message = "Erreur 404 : la page recherchée n'existe pas.";
+}
+
+
+
+include('views/header.php');
+include('views/' . $vue . '.php');
+include('views/footer.php');

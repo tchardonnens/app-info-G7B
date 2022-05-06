@@ -1,7 +1,6 @@
 <?php
-ini_set('display_errors', 'on');
-require_once '../libraries/database.php';
-require_once '../controllers/functions.php';
+require_once './libraries/database.php';
+require_once './controllers/functions.php';
 
 class User {
 
@@ -12,9 +11,9 @@ class User {
     }
 
     //Find user by email or username
-    public function findUserByEmail($email){
-        $this->db->query('SELECT * FROM users WHERE mail = :email');
-        $this->db->bind(':email', $email);
+    public function findUserByEmail($mail){
+        $this->db->query('SELECT * FROM users WHERE mail = :mail');
+        $this->db->bind(':mail', $mail);
 
         $row = $this->db->single();
 
@@ -27,7 +26,7 @@ class User {
     }
 
     //Register User
-    public function register($data){
+    public function signup($data){
         $this->db->query('INSERT INTO users (`name`, `mail`, `hashed_password`) 
         VALUES (:name, :mail, :hashed_password)');
         //Bind values
@@ -45,12 +44,12 @@ class User {
     }
 
     //Login user
-    public function login($email, $password){
+    public function signin($email, $password){
         $row = $this->findUserByEmail($email);
 
         if($row == false) return false;
 
-        $hashedPassword = $row->password;
+        $hashedPassword = $row->hashed_password;
         if(password_verify($password, $hashedPassword)){
             return $row;
         }else{
