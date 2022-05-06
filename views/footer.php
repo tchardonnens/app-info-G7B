@@ -10,9 +10,9 @@
         <a href="index.php?cible=infos&function=help" class="no-header-style">SAV</a>
         <a href="index.php?cible=infos&function=contact" class="no-header-style">Contact</a>
         <div class="row-container">
-            <img class="image-réseaux" src="content/instagram.png" />
-            <img class="image-réseaux" src="content/linkedin.png" />
-            <img class="image-réseaux" src="content/facebook.png" />
+            <img class="image-réseaux" src="content/instagram.png" href="#"/>
+            <img class="image-réseaux" src="content/linkedin.png" href="#"/>
+            <img class="image-réseaux" src="content/facebook.png" href="#"/>
         </div>
     </div>
 </footer>
