@@ -17,12 +17,14 @@ session_start();
 
 <body>
     <header>
-        <img class="image-logo" src="content/wave-it-blue.jpg" />
+        <img class="image-logo" src="content/infinite.png" />
 
         <ul>
             <a href="index.php?cible=infos&function=home">Accueil</a>
             <?php if(isset($_SESSION['name'])){
                 echo '<a href="index.php?cible=challenge&function=challenge">Challenge</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Capteurs</a>';
+
             }
             ?>
             <a href="index.php?cible=infos&function=contact">Contact</a>

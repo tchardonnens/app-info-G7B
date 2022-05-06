@@ -10,7 +10,7 @@
 <section>
     
     <article>
-        <img src="./content/wave-it-white.png" />
+        <img src="./content/infinite.png" />
     </article>
     <aside>
         <div class="mesures">

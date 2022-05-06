@@ -1,40 +1,47 @@
-<?php 
-/**
-* Vue : liste des capteurs déjà enregistrés
-*/
-?>
 
-<p><?php echo $entete; ?></p>
-
-
-<table>
-	<thead>
-		<tr>
-
-			<th>Nom</th>
-			<th>Type</th>
-		</tr>
-	</thead>
-	<tbody>	
-	
-    <?php foreach ($liste as $element) { ?>
-    
-        <tr>
-        		<td>
-				<?php echo $element['name']; ?>
-            	</td>
-        		<td>
-        			<?php echo $element['type']; ?>
-        		</td>
-        	</tr>
-    
-    <?php } ?>
-
-	</tbody>
-</table>
-
-
-<?php echo AfficheAlerte($alerte); ?>
-
-
-<p><a href="index.php?cible=capteurs&fonction=ajout">Ajouter un capteur</a> | <a href="index.php?cible=capteurs&fonction=recherche">Chercher des capteurs</a> | <a href="index.php">Accueil</a></p>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles/sensors.php"/>
+        <title>Capteurs</title>
+    </head>
+<nomequipe>
+    <form>
+        <p>Veuillez entrer votre nom d'équipe</p>
+        <input type="text" name="equipe" class="equipe" placeholder="Nom d'équipe" size="60" maxlength="30" />
+    </form>
+</nomequipe>
+</br></br>
+<p class="question">Quel capteur voulez-vous retirer ?</p>
+<section>
+    <div class="column-container">
+        <div>
+            <img src="content/noise.png"/>
+            <p >Sonore</p>
+            <a href="#">Retirer</a>
+        </div>
+        <div>
+            <img src="content/cardiac.png"/>
+            <p>Rythme cardiaque</p>
+            <a href="#">Retirer</a>
+        </div>
+        <div>
+            <img src="content/co2.png"/>
+            <p>CO2</p>
+            <a href="#">Retirer</a>
+        </div>
+        <div>
+            <img src="content/temperature.png"/>
+            <p>Température</p>
+            <a href="#">Retirer</a>
+        </div>
+        <div>
+            <img src="content/humidity.png"/>
+            <p>Humidité</p>
+            <a href="#">Retirer</a>
+        </div>
+    </div>
+</section>
+</br></br>
+<aside>
+    <a href="#">Confirmer</a>
+</aside>
