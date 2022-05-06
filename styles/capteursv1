@@ -1,0 +1,74 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;    
+}
+nomequipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+nomequipe p{
+    border: 5px ridge black;
+    padding: 10px;
+    min-width: 50px;
+}
+nomequipe .equipe{
+    font-size: large;
+}
+.question{
+    display: flex;
+    justify-content: center;
+    background-color:cornflowerblue;
+    border: 5px double white;
+    padding: 10px;
+    min-width: 50px;
+}
+.mesures{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+section a{
+    text-decoration: none;
+    color: black;
+    background-color: cornflowerblue;
+    border-radius:50px;
+    display: inline-block;
+    border: 5px double white;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 100px;
+    transition: all 0.5s;
+}
+section a:focus{
+    background-color: coral;
+    font-weight: bold;  
+    color: black;
+}
+aside{
+    display: flex;
+    justify-content: center;
+}
+aside a{
+    text-decoration: none;
+    color: black;
+    background-color:chartreuse;
+    border-radius:50px;
+    display: inline-block;
+    border: 5px inset black;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+}
+aside a:focus{
+    background-color:bisque;
+    font-weight: bold;  
+    color: black;
+    border: 5px outset white;
+}
