@@ -1,7 +1,7 @@
 
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="styles/sensors.php"/>
+        <link rel="stylesheet" href="styles/sensors.css"/>
         <title>Capteurs</title>
     </head>
 <nomequipe>
