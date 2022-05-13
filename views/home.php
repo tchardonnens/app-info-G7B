@@ -8,7 +8,7 @@
     } 
     ?> </h1>
 <section>
-    
+    <!-- petit comment de test -->
     <article>
         <img src="./content/infinite.png" />
     </article>
