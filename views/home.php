@@ -15,7 +15,6 @@
     </p>
         </div>
     <aside>
-        <div class="mesures">
             <div class="element">
                 <img src="./content/noise.png" />
                 <p>Sonore</p>
@@ -36,7 +35,6 @@
                 <img src="./content/humidity.png" />
                 <p>Humidité</p>
             </div>
-        </div>
     </aside>
     <div class="texts">
     <h1>Le Challenge</h1>
