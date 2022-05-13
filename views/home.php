@@ -36,14 +36,20 @@
             </div>
         </div>
     </aside>
-</section>
-<h1>Présentation</h1>
-<p class="presentation">
+    <div class="texts">
+        <div class="Texts2">
+    <h1>Présentation</h1>
+    <p class="presentation">
     Wave IT propose une interface permettant de comprendre votre environnement.
     Grâce aux différents capteurs et à ce site, vous comprendrez votre environnement et en deviendrez le maître.
     Notre site comprend une interface ludique vous mettant en compétition avec le restant des participants pour avoir le meilleur environnement de travail.
-</p>
-<h1>Le Challenge</h1>
-<p class="presentation">
+    </p>
+        </div>
+        <div class="Texts2">
+    <h1>Le Challenge</h1>
+    <p class="presentation">
     Leaderboard et compétition, nous allons vous faire aimer le bien-être au travail.   
-</p>
+    </p>
+        </div>
+    </div>
+</section>

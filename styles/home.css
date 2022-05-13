@@ -8,15 +8,14 @@ body {
 h1{
   text-align: center;
   color: rgb(59, 59, 152);
-
 }
 
 section {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 article {
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: 0px;
 }
 aside {
@@ -32,7 +31,7 @@ p {
   text-align: center;
 }
 article img {
-  block-size: 300px;
+  block-size: 500px;
   margin-left: 100px;
   justify-content: center;
 }
@@ -55,12 +54,16 @@ aside img {
   flex-direction: column;
   margin-top: 150px;
 }
+.texts{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
 
+}
 .presentation {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items:space-around;
+  justify-content:space-around;
   padding-left: 10%;
   padding-right: 10%;
 }
