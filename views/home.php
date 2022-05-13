@@ -1,10 +1,8 @@
 <head>
     <link rel="stylesheet" href="./styles/home.css" />
 </head>
-<h1 id="index-text">Welcome, <?php if(isset($_SESSION['name'])){
-        echo explode(" ", $_SESSION['name'])[0];
-    }else{
-        echo 'Guest';
+<h1 id="index-text"><?php if(isset($_SESSION['name'])){
+        echo explode("Welcome ", $_SESSION['name'])[0];
     } 
     ?> </h1>
 <section>
