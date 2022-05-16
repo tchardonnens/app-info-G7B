@@ -16,7 +16,6 @@ aside {
   display: flex;
   justify-content: space-around;
   margin: 0 500px 0 500px;
-
 }
 aside p {
   font-size: 30px;
@@ -25,7 +24,7 @@ aside p {
   text-align: center;
 }
 aside img {
-  block-size: 150px;
+  block-size: 100px;
 }
 .element{
   text-align: center;

@@ -7,10 +7,10 @@
     * Return rows and results
 */
 class Database {
-    private $host = 'localhost:8889';
+    private $host = 'localhost:3306';
     private $user = 'root';
-    private $pass = 'root';
-    private $dbname = 'infinite_measures';
+    private $pass = '';
+    private $dbname = 'app';
 
     //Will be the PDO object
     private $dbh;

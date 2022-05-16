@@ -22,8 +22,7 @@ include_once 'helpers/session_helper.php';
 
 	<label>Mot de passe :</label>
 	<input type="password" name="password" placeholder="Mot de passe" />
-	<br>
-
+	<p>Le mot de passe doit avoir une majuscule, un chiffre et un caractère spécial</p>
 	<label>Mot de passe (vérification) :</label>
 	<input type="password" name="pwdRepeat" placeholder="Mot de passe à nouveau" />
 	<br>
