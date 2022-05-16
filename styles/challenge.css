@@ -4,24 +4,55 @@
     justify-content: center;
 }
 equipe1,equipe2,equipe3{
-        display:flex;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        align-items: center;
-        flex-direction: column;
-        align-items: center;
-        padding: 100px;
-        margin: auto 10px 0 10px;
-        border-style: ridge;
+    display:flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    align-items: center;
+    line-height: 0;
 }
 equipe1{
-    background: red;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 equipe2{
-    background-color: rgb(253, 50, 50);
-    margin-top: 200px;
+    margin-top: 100px;
 }
 equipe3{
-    background-color: rgb(255, 100, 100);
-    margin-top: 300px;
+    margin-top: 200px;
+}
+.un{
+    border-color:gold;
+}
+.un2{
+    padding-bottom: 250px;
+    background-color: gold;
+}
+.deux{
+    border-color: silver;
+}
+.deux2{
+    padding-bottom: 150px;
+    background-color: silver;
+}
+.trois{
+    border-color:orangered;
+}
+.trois2{
+    padding-bottom: 50px;
+    background-color: red;
+}
+.un,.deux,.trois{
+    padding-left: 100px;
+    padding-right: 100px;
+    border-style: ridge;
+    border-width: 10px;
+    color: white;
+}
+.un2,.deux2,.trois2{
+    padding-top: 50px;
+    font-size: 100px;
+    border-style: none;
+    padding-left:50px;
+    padding-right:50px;
+    border-style:ridge
 }
