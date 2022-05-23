@@ -1,9 +1,11 @@
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   height: 12vh;
   background-color: #e1f5fe;
+  position: fixed;
+  width:1600px;
 }
 
 ul {
@@ -11,6 +13,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 200px;
 }
 
 a {

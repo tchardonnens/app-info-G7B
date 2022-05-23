@@ -1,8 +1,14 @@
+*{
+  margin: auto;
+  
+}
 footer {
+  display: flex;
   height: 15vh;
   background-color: #e1f5fe;
+  position: fixed;
+  width:1600px;
 }
-
 .image-réseaux {
   height: 7vh;
 }
@@ -14,6 +20,8 @@ footer {
   justify-content:space-around;
   align-items:center;
   align-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .no-header-style {
