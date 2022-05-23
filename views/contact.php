@@ -1,6 +1,12 @@
 <head>
     <link rel="stylesheet" href="styles/contact.css" />
 </head>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 <div class="row-container">
 <div class="column-container">
     <img class="mail" src="content/mail.png" />
@@ -15,3 +21,5 @@
     <button>Envoyer</button>
 </div>
 </div>
+</br>
+</br>

@@ -1,19 +1,22 @@
 <head>
     <link rel="stylesheet" href="./styles/home.css" />
 </head>
+</br>
+</br>
+</br>
 <h1 id="index-text"><?php if(isset($_SESSION['name'])){
         echo explode("Welcome ", $_SESSION['name'])[0];
     } 
     ?> </h1>
 <section>
-    <div class="texts">
-    <h1>Présentation</h1>
-    <p class="presentation">
+    <h1 class="texts1">
+    Présentation
+    </h1>
+    <p class="presentation1">
     Wave IT propose une interface permettant de comprendre votre environnement.
     Grâce aux différents capteurs et à ce site, vous comprendrez votre environnement et en deviendrez le maître.
     Notre site comprend une interface ludique vous mettant en compétition avec le restant des participants pour avoir le meilleur environnement de travail.
     </p>
-        </div>
     <aside>
             <div class="element">
                 <img src="./content/noise.png" />
@@ -36,10 +39,10 @@
                 <p>Humidité</p>
             </div>
     </aside>
-    <div class="texts">
-    <h1>Le Challenge</h1>
-    <p class="presentation">
+    <h1 class="texts2">
+    Le Challenge
+    </h1>
+    <p class="presentation2">
     Leaderboard et compétition, nous allons vous faire aimer le bien-être au travail.   
     </p>
-    </div>
 </section>

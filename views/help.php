@@ -1,6 +1,9 @@
 <head>
     <link rel="stylesheet" href="styles/legal.css" />
 </head>
+</br>
+</br>
+</br>
 <section>
     <h1>SAV</h1>
     <p class="question">Suivi du produit</p></br>

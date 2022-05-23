@@ -5,8 +5,9 @@ include_once 'helpers/session_helper.php';
 <head>
     <link rel="stylesheet" href="styles/signin.css" />
 </head>
-
-
+</br>
+</br>
+</br>
 <div class="full-page">
     <div class="column-container">
     <?php flash('signin') ?>

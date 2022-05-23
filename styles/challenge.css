@@ -1,7 +1,7 @@
 .podium{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:center;
 }
 equipe1,equipe2,equipe3{
     display:flex;
@@ -9,30 +9,30 @@ equipe1,equipe2,equipe3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     align-items: center;
-    line-height: 0; 
+    line-height: 40px
 }
 equipe1{
-    margin-top: 0px;
+    margin: 50px 0 0 0;
 }
 equipe2{
-    margin-top: 100px;
+    margin: 150px 0 0 100px;
 }
 equipe3{
-    margin-top: 200px;
+    margin: 250px 100px 0 0 ;
 }
 .un{
     border-color:gold;
 }
 .un2{
-    padding-bottom: 225px;
-    background-color: gold;
+    padding-bottom: 250px;
+    background-color: #ffd700;
     border-color: gold;
 }
 .deux{
     border-color: silver;
 }
 .deux2{
-    padding-bottom: 125px;
+    padding-bottom: 150px;
     background-color: silver;
     border-color: silver;
 }
@@ -40,7 +40,7 @@ equipe3{
     border-color:red;
 }
 .trois2{
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     background-color: red;
     border-color: red;
 }
@@ -49,17 +49,24 @@ equipe3{
     padding-right: 100px;
     border-style: ridge;
     border-width: 10px;
+    margin: 50px 0 0 0;
 }
 .un2,.deux2,.trois2{
+    display: flex;
     padding-top: 25px;
     padding-left:50px;
     padding-right:50px;
     border-style:ridge;
     display: flex;
     flex-direction: column;
+    align-items: 
 }
 .rang{
     text-align: center;
     font-size: 50px;
     color: white;
+}
+p{
+    display: flex;
+    justify-content: space-around;
 }

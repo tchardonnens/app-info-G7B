@@ -5,10 +5,12 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 1vh;
+    margin-top: 10px;
 }
 
 .spacer {
     padding-bottom: 10vh;
+    margin-top: 50px;
 }
 
 .no-header-style {

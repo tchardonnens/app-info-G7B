@@ -4,6 +4,12 @@
         <link rel="stylesheet" href="styles/sensors.css"/>
         <title>Capteurs</title>
     </head>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 <nomequipe>
     <form>
         <p>Veuillez entrer votre nom d'équipe</p>

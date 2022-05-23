@@ -5,14 +5,13 @@ section p{
 h1{
     text-align: center;
     color: rgb(59, 59, 152);
-
 }
 .question{
     font-size: x-large;
     font-display: 100px;
     color: rgb(59, 59, 152);
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: #e1f5fe;
     text-align: center;
 }
@@ -21,7 +20,7 @@ h1{
     padding-left: 3vw;
     max-width: 500px;
     text-align: center;
-    margin: auto;
+    margin: 0 auto 0 auto;
 }
 
 .column-container {

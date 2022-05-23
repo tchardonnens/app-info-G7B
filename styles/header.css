@@ -4,8 +4,8 @@ header {
   align-items: center;
   height: 12vh;
   background-color: #e1f5fe;
-  position: fixed;
   width:1600px;
+  position: fixed;
 }
 
 ul {

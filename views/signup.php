@@ -5,8 +5,10 @@ include_once 'helpers/session_helper.php';
 <head>
 	<link rel="stylesheet" href="styles/signup.css" />
 </head>
-
-
+</br>
+</br>
+</br>
+</br>
 <form method="POST" action="index.php?cible=users&function=signup" class="column-container">
 	<?php flash('signup') ?>
 	<input type="hidden" name="type" value="signup">

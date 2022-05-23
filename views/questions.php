@@ -2,7 +2,12 @@
 <head>
     <link rel="stylesheet" href="styles/questions.css" />
 </head>
-<h1>FAQ</h1>
+</br>
+</br>
+</br>
+</br>
+<h1>FAQ</h1> 
+
 <p class="question">Comment nous contacter ?</p></br>
 <p class="answer">Vous pouvez nous contacter en allant sur la page Contact ou en nous conactant sur nos
     réseaux sociaux</p></br>
