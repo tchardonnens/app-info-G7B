@@ -6,8 +6,9 @@ footer {
   display: flex;
   height: 15vh;
   background-color: #e1f5fe;
-  width:1600px;
-  position: fixed;
+  width:100%;
+  position:fixed;
+  bottom:0;
 }
 .image-réseaux {
   height: 7vh;

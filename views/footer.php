@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="styles/footer.css">
 </head>
 
-</div>
 <footer>
     <div class="row-container">
         <a href="index.php?cible=infos&function=legal" class="no-header-style">Mentions légales</a>

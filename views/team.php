@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="styles/team.php"/>
+        <link rel="stylesheet" href="styles/team.css"/>
         <title>Challenge</title>
     </head>
 <body>

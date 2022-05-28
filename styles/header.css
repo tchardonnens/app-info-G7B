@@ -1,19 +1,17 @@
 header {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content:left;
   height: 12vh;
   background-color: #e1f5fe;
-  width:1600px;
+  width:100%;
   position: fixed;
+  top:0;
 }
 
 ul {
   font-size: 20px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-right: 200px;
+  padding-right: 500px;
 }
 
 a {

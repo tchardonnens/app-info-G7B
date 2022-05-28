@@ -1,4 +1,6 @@
-
+*{
+  position:static;
+}
 .image-réseaux {
   height: 100px;
 }
@@ -18,13 +20,14 @@ aside {
   margin: 20px 500px 0 500px;
 }
 aside p {
-  font-size: 300px;
+  font-size: 20px;
   font-weight:bold;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 aside img {
   block-size: 100px;
+  margin: auto 50px auto 50px;
 }
 .element{
   text-align: center;
@@ -32,13 +35,16 @@ aside img {
 .texts1, .texts2 ,.presentation1, .presentation2{
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 20px;
   text-align:center;
-  max-width: 1500px;
+  width: 1000px;
   align-content: center;
 }
-.texts2{
-  margin-top: 20px;
+.presentation2{
+  padding-bottom: 50px;
 }
-@media screen and (max-width: 1280px) {
+.texts2{
+  padding-top: 25px;
+}
+@media screen and (max-width: 1230px) {
 }

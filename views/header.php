@@ -17,7 +17,7 @@ session_start();
 
 <body>
     <header>
-        <img class="image-logo" src="content/infinite.png" />
+        <a href="http://localhost/app-info-G7B/index.php?cible=infos&function=home"><img class="image-logo" src="content/infinite.png" /></a>
 
         <ul>
             <a href="index.php?cible=infos&function=home">Accueil</a>

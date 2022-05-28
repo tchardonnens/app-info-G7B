@@ -6,9 +6,14 @@ h1{
     text-align: center;
     color: rgb(59, 59, 152);
 }
+.questioner{
+    display: flex;
+    justify-content: center;
+    width:500px;
+    height:10px;
+}
 .question{
-    font-size: x-large;
-    font-display: 100px;
+    font-size: large;
     color: rgb(59, 59, 152);
     padding-top: 0;
     padding-bottom: 0;
@@ -29,3 +34,12 @@ h1{
     justify-content: center;
     align-items: center;
   }
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination a {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+}

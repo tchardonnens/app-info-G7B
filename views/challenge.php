@@ -10,7 +10,7 @@
 </br>
 <div class="podium">
 <equipe2>
-    <p>equipe 2</p>
+    <a href="index.php?cible=users&function=team"><p>equipe 2</p></a>
     <div class="deux">
         <div class="deux2">
             <p class="rang">2</p>
