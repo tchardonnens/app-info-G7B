@@ -20,7 +20,7 @@ include_once 'helpers/session_helper.php';
             </br>
             <input type="password" name="password" placeholder="Mot de passe" class="case">
             </br>
-                <button type="submit" name="submit"><a href=http://localhost/app-info-G7B/index.php?cible=users&function=sensors class="lien">Connexion</a></button>
+                <button type="submit" name="submit">Connexion</button>
         </form>
     </div>
 </div>
