@@ -23,7 +23,7 @@ session_start();
             <a href="index.php?cible=infos&function=home">Accueil</a>
             <?php if(isset($_SESSION['name'])){
                 echo '<a href="index.php?cible=challenge&function=challenge">Challenge</a>';
-                echo '<a href="index.php?cible=users&function=sensors">Capteurs</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Données Environnementales</a>';
 
             }
             ?>
