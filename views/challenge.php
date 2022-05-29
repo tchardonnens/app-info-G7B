@@ -10,7 +10,7 @@
 </br>
 <div class="podium">
 <equipe2>
-    <a href="index.php?cible=users&function=team"><p>equipe 2</p></a>
+    <p><a href="http://localhost/app-info-G7B/index.php?cible=users&function=sensors">equipe 2</a></p>
     <div class="deux">
         <div class="deux2">
             <p class="rang">2</p>
@@ -21,7 +21,7 @@
 </equipe2>
 
 <equipe1>
-    <p>equipe 1</p>
+    <p><a href="http://localhost/app-info-G7B/index.php?cible=users&function=sensors">equipe 1</a></p>
     <div class="un">
         <div class="un2">
             <p class="rang">1</p>
@@ -32,7 +32,7 @@
 </equipe1>
 
 <equipe3>
-    <p>equipe 3</p>
+    <p><a href="http://localhost/app-info-G7B/index.php?cible=users&function=sensors">equipe 3</a></p>
     <div class="trois">
         <div class="trois2">
             <p class="rang">3</p>

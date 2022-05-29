@@ -1,53 +1,35 @@
-
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="styles/sensors.css"/>
-        <title>Capteurs</title>
-    </head>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-<nomequipe>
-    <form>
-        <p>Veuillez entrer votre nom d'équipe</p>
-        <input type="text" name="equipe" class="equipe" placeholder="Nom d'équipe" size="60" maxlength="30" />
-    </form>
-</nomequipe>
-</br></br>
-<p class="question">Quel capteur voulez-vous retirer ?</p>
-<section>
-    <div class="column-container">
-        <div>
-            <img src="content/noise.png"/>
-            <p >Sonore</p>
-            <a href="#">Retirer</a>
-        </div>
-        <div>
-            <img src="content/cardiac.png"/>
-            <p>Rythme cardiaque</p>
-            <a href="#">Retirer</a>
-        </div>
-        <div>
-            <img src="content/co2.png"/>
-            <p>CO2</p>
-            <a href="#">Retirer</a>
-        </div>
-        <div>
-            <img src="content/temperature.png"/>
-            <p>Température</p>
-            <a href="#">Retirer</a>
-        </div>
-        <div>
-            <img src="content/humidity.png"/>
-            <p>Humidité</p>
-            <a href="#">Retirer</a>
-        </div>
+<head>
+    <link rel="stylesheet" href="styles/sensors.css"/>
+</head>
+<body>
+    <div class="Température">
+        <p>Température</br>
+        mesure</br>
+        score</p></br>
     </div>
-</section>
-</br></br>
-<aside>
-    <a href="#">Confirmer</a>
-</aside>
+
+    <div class="Humidité">
+        <p>Humidité</br>
+        mesure</br>
+        score</p></br>
+    </div>
+
+    <div class="Cardiaque">
+        <p>Cardiaque</br>
+        mesure</br>
+        score</p></br>
+    </div>
+
+    <div class="Sonorité">
+        <p>Sonorité</br>
+        mesure</br>
+        score</p></br>
+    </div>
+
+    <div class="CO2">
+        <p>CO2</br>
+        mesure</br>
+        score</p></br>
+    </div>
+</body>
+    
