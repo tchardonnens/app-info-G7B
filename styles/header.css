@@ -1,11 +1,12 @@
 header {
   display: flex;
-  justify-content:left;
-  height: 12vh;
-  background-color: #e1f5fe;
+  justify-content:right;
+  height: 10vh;
+  background-color: #6960BB;
   width:100%;
   position: fixed;
   top:0;
+  
 }
 
 ul {
@@ -16,7 +17,7 @@ ul {
 
 a {
   margin-right: 3vw;
-  color: black;
+  color: whitesmoke;
   text-decoration: none;
   list-style-type: none;
 }

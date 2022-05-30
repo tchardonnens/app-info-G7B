@@ -4,8 +4,8 @@
 }
 footer {
   display: flex;
-  height: 15vh;
-  background-color: #e1f5fe;
+  height: 10vh;
+  background-color: #6960BB;
   width:100%;
   position:fixed;
   bottom:0;
@@ -16,7 +16,7 @@ footer {
 
 .row-container {
   display: flex;
-  padding-top: 2vh;
+  padding-top: 1vh;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -24,7 +24,7 @@ footer {
   align-content: center;
   padding-left: 100px;
   padding-right: 100px;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
   list-style-type: none;
 }

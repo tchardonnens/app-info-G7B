@@ -20,23 +20,23 @@
     </p>
     <aside>
             <div class="element">
-                <img src="./content/noise.png" />
+                <img src="./content/new-icons/basic/sound.svg" />
                 <p>Sonore</p>
             </div>
             <div class="element">
-                <img src="./content/cardiac.png" />
+                <img src="./content/new-icons/basic/heart.svg" />
                 <p>Rythme cardiaque</p>
             </div>
             <div class="element">
-                <img src="./content/co2.png" />
+                <img src="./content/new-icons/basic/co2.svg" />
                 <p>CO2</p>
             </div>
             <div class="element">
-                <img src="./content/temperature.png" />
+                <img src="./content/new-icons/basic/temperature.svg" />
                 <p>Température</p>
             </div>
             <div class="element">
-                <img src="./content/humidity.png" />
+                <img src="./content/new-icons/basic/humidity.svg" />
                 <p>Humidité</p>
             </div>
     </aside>

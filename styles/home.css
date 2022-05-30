@@ -10,6 +10,14 @@ h1{
   color: rgb(59, 59, 152);
   margin-top: 20px;
 }
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
 section {
   min-width: 500px;
   flex-direction: column;
@@ -46,5 +54,4 @@ aside img {
 .texts2{
   padding-top: 25px;
 }
-@media screen and (max-width: 1230px) {
-}
+
