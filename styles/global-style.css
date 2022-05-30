@@ -16,6 +16,12 @@ body {
   ); */
 }
 
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  list-style-type: none;
+}
+
 .full-page {
   min-height: 75vh;
 }
