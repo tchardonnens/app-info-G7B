@@ -166,6 +166,16 @@ switch ($function) {
         $title = "Capteurs";
         break;
 
+    case 'profile':
+        $vue = "profile";
+        $title = "Mon profil";
+        break;
+    
+    case 'messages':
+        $vue = "messages";
+        $title = "Mes messages";
+        break;
+
     default:
         // si aucune fonction ne correspond au paramètre function passé en GET
         $vue = "error404";

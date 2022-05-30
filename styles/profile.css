@@ -1,0 +1,15 @@
+h1 {
+    color: #6960BB;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 30vh;
+}
+
+.h-stack {
+    justify-content: space-evenly;
+}

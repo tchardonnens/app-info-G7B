@@ -6,14 +6,10 @@
 body {
   margin: 0;
   height: 100%;
-  /* background: linear-gradient(
-    to left bottom,
-    #2383cc,
-    #0077df,
-    #0066ed,
-    #4b4cf2,
-    #8012eb
-  ); */
+}
+
+h1 {
+  color: #6960BB;
 }
 
 a {
@@ -44,4 +40,22 @@ button {
   color: white;
   font-size: 2vh;
   font-weight: bold;
+}
+
+.spacer {
+  padding-bottom: 30px;
+}
+
+.h-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

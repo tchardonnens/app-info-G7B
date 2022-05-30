@@ -1,72 +1,39 @@
-.podium{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
+img {
+    height: 30vh;
 }
-equipe1,equipe2,equipe3{
-    display:flex;
-    flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
-    align-items: center;
-    line-height: 40px
+
+.h-stack {
+    justify-content: space-evenly;
 }
-equipe1{
-    margin: 50px 0 0 0;
+
+ol {
+  font-weight: 700;
 }
-equipe2{
-    margin: 150px 0 0 100px;
+
+.leaderboard {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50vw;
 }
-equipe3{
-    margin: 250px 100px 0 0 ;
+
+.leaderboard td,
+.leaderboard th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
-.un{
-    border-color:gold;
+
+.leaderboard tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
-.un2{
-    padding-bottom: 250px;
-    background-color: #ffd700;
-    border-color: gold;
+
+.leaderboard tr:hover {
+  background-color: #ddd;
 }
-.deux{
-    border-color: silver;
-}
-.deux2{
-    padding-bottom: 150px;
-    background-color: silver;
-    border-color: silver;
-}
-.trois{
-    border-color:red;
-}
-.trois2{
-    padding-bottom: 50px;
-    background-color: red;
-    border-color: red;
-}
-.un,.deux,.trois{
-    padding-left: 100px;
-    padding-right: 100px;
-    border-style: ridge;
-    border-width: 10px;
-    margin: 50px 0 0 0;
-}
-.un2,.deux2,.trois2{
-    display: flex;
-    padding-top: 25px;
-    padding-left:50px;
-    padding-right:50px;
-    border-style:ridge;
-    display: flex;
-    flex-direction: column;
-    align-items: 
-}
-.rang{
-    text-align: center;
-    font-size: 50px;
-    color: white;
-}
-p{
-    display: flex;
-    justify-content: space-around;
+
+.leaderboard th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6960BB;
+  color: white;
 }

@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -41,32 +42,28 @@ toggle between hiding and showing the dropdown content */
     <header>
         <a href="http://localhost/app-info-G7B/index.php?cible=infos&function=home"><img class="image-logo" src="content/infinite.png" /></a>
 
-        <ul>
-            <a href="index.php?cible=infos&function=home">Accueil</a>
+        <nav>
+            <li><a href="index.php?cible=infos&function=home">Accueil</a></li>
+            <li><a href="index.php?cible=challenge&function=challenge">Challenge</a></li>
+            <li><a href="index.php?cible=infos&function=contact">Contact</a></li>
+            <li><a href="index.php?cible=infos&function=questions">FAQ</a></li>
+            <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Mon Compte</button>
+            <div id="myDropdown" class="dropdown-content">
             <?php if (isset($_SESSION['name'])) {
-                echo '<a href="index.php?cible=challenge&function=challenge">Challenge</a>';
-                echo '<a href="index.php?cible=users&function=sensors">Mes Données</a>';
-            }
-            ?>
-            <a href="index.php?cible=infos&function=contact">Contact</a>
-            <a href="index.php?cible=infos&function=questions">FAQ</a>
-            <?php if (isset($_SESSION['name'])) {
+                echo '<a href="index.php?cible=users&function=profile">Profil</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Données</a>';
+                echo '<a href="index.php?cible=users&function=messages">Messagerie</a>';
                 echo '<a href="index.php?cible=users&function=logout">Déconnexion</a>';
-            } else {
+            }
+            else {
                 echo '<a href="index.php?cible=users&function=signin">Se connecter</a>';
                 echo '<a href="index.php?cible=users&function=signup">S\'inscrire</a>';
             }
             ?>
-
-
-        </ul>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="index.php?cible=infos&function=contact">Home</a>
-                <a href="index.php?cible=infos&function=contact">About</a>
-                <a href="index.php?cible=infos&function=contact">Contact</a>
             </div>
         </div>
+        </nav>
+        
     </header>
     <div class="full-page">

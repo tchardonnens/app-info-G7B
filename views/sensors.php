@@ -1,35 +1,19 @@
+<?php
+if (!isset($_SESSION['name'])) {
+    header("Location: index.php?cible=users&function=signin"); 
+}
+?>
+
 <head>
-    <link rel="stylesheet" href="styles/sensors.css"/>
+    <link rel="stylesheet" href="./styles/profile.css" />
 </head>
-<body>
-    <div class="Température">
-        <p>Température</br>
-        mesure</br>
-        score</p></br>
-    </div>
 
-    <div class="Humidité">
-        <p>Humidité</br>
-        mesure</br>
-        score</p></br>
-    </div>
-
-    <div class="Cardiaque">
-        <p>Cardiaque</br>
-        mesure</br>
-        score</p></br>
-    </div>
-
-    <div class="Sonorité">
-        <p>Sonorité</br>
-        mesure</br>
-        score</p></br>
-    </div>
-
-    <div class="CO2">
-        <p>CO2</br>
-        mesure</br>
-        score</p></br>
-    </div>
-</body>
-    
+<h1 id="welcome-text"><?php if (isset($_SESSION['name'])) {
+                        echo explode("Welcome ", $_SESSION['name'])[0];
+                    }
+                    ?> </h1>
+<div class="spacer"></div>
+<div class="h-stack">
+    <p>C'est ici que vous pouvez consulter les données de votre Open Space.</p>
+    <img src="./content/new-icons/illustrations/visualization.svg">
+</div>

@@ -1,35 +1,24 @@
-*{
-  margin: auto;
-  
-}
 footer {
-  display: flex;
   height: 10vh;
   background-color: #6960BB;
   width:100%;
   position:fixed;
   bottom:0;
 }
-.image-réseaux {
+.image-socials {
   height: 7vh;
 }
 
-.row-container {
-  display: flex;
-  padding-top: 1vh;
+.footer-row-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
-  align-items:center;
-  align-content: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  padding-top: 1vh;
   font-size: 16px;
+
   text-decoration: none;
   list-style-type: none;
-}
-
-.no-header-style {
-  margin-right: 200px;
 }
 
