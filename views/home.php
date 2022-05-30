@@ -6,7 +6,7 @@
 </br>
 </br>
 <h1 id="index-text"><?php if(isset($_SESSION['name'])){
-        echo explode("Welcome ", $_SESSION['name'])[0];
+        echo "Welcome " . $_SESSION['name'];
     } 
     ?> </h1>
 <section>
