@@ -2,8 +2,8 @@ footer {
   height: 10vh;
   background-color: #6960BB;
   width:100%;
-  position:fixed;
   bottom:0;
+  position: fixed;
 }
 .image-socials {
   height: 7vh;
