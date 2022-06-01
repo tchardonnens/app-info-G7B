@@ -8,10 +8,7 @@ if (!isset($_SESSION['name'])) {
     <link rel="stylesheet" href="./styles/profile.css" />
 </head>
 
-<h1 id="welcome-text"><?php if (isset($_SESSION['name'])) {
-                        echo explode("Welcome ", $_SESSION['name'])[0];
-                    }
-                    ?> </h1>
+<h1 id="welcome-text">Mes messages</h1>
 <div class="spacer"></div>
 <div class="h-stack">
     <p>C'est ici que vous pouvez consulter les données de votre Open Space.</p>

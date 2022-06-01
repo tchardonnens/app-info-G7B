@@ -8,10 +8,7 @@ if (!isset($_SESSION['name'])) {
     <link rel="stylesheet" href="./styles/sensors.css" />
 </head>
 
-<h1 id="welcome-text"><?php if (isset($_SESSION['name'])) {
-                            echo explode("Welcome ", $_SESSION['name'])[0];
-                        }
-                        ?> </h1>
+<h1 id="welcome-text">Mes données</h1>
 <div class="spacer"></div>
 
 <ul id="tabs" class="tabs">

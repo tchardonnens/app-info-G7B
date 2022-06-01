@@ -50,10 +50,26 @@ toggle between hiding and showing the dropdown content */
             <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Mon Compte</button>
             <div id="myDropdown" class="dropdown-content">
-            <?php if (isset($_SESSION['name'])) {
+            <?php if (isset($_SESSION['name']) && $_SESSION['id_role']==1) {
                 echo '<a href="index.php?cible=users&function=profile">Profil</a>';
                 echo '<a href="index.php?cible=users&function=sensors">Données</a>';
                 echo '<a href="index.php?cible=users&function=messages">Messagerie</a>';
+                echo '<a href="index.php?cible=users&function=logout">Déconnexion</a>';
+            }
+            else if (isset($_SESSION['name']) && $_SESSION['id_role']==2) {
+                echo '<a href="index.php?cible=users&function=profile">Profil</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Données</a>';
+                echo '<a href="index.php?cible=users&function=messages">Messagerie</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Users</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Equipes</a>';
+                echo '<a href="index.php?cible=users&function=logout">Déconnexion</a>';
+            }
+            else if (isset($_SESSION['name']) && $_SESSION['id_role']==3) {
+                echo '<a href="index.php?cible=users&function=profile">Profil</a>';
+                echo '<a href="index.php?cible=users&function=sensors">Données</a>';
+                echo '<a href="index.php?cible=users&function=messages">Messagerie</a>';
+                echo '<a href="index.php?cible=admin&function=users">Users</a>';
+                echo '<a href="index.php?cible=admin&function=teams">Equipes</a>';
                 echo '<a href="index.php?cible=users&function=logout">Déconnexion</a>';
             }
             else {
