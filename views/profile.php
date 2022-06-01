@@ -12,13 +12,15 @@ if (!isset($_SESSION['name'])) {
 <div class="spacer"></div>
 <div class="h-stack">
     <form class="v-stack" action="index.php?cible=users&function=profile" method="POST">
+        <?php flash('profile') ?>
+        <input type="hidden" name="type" value="profile">
         <h2>Vos informations :</h2>
         <label>Prénom</label>
-        <input type="text" value="<?php echo $_SESSION['firstname'] ?>" required />
+        <input type="text" name="firstname" value="<?php echo $_SESSION['firstname'] ?>" required />
         <label>Nom</label>
-        <input type="text" value="<?php echo $_SESSION['name'] ?>" required />
+        <input type="text" name="name" value="<?php echo $_SESSION['name'] ?>" required />
         <label>Email</label>
-        <input type="text" value="<?php echo $_SESSION['mail'] ?>" required />
+        <input type="text" value="<?php echo $_SESSION['mail'] ?>" disabled />
         <div class="spacer"></div>
         <button type="submit" name="submit" class="button">Sauvegarder</button>
     </form>

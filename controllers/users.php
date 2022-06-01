@@ -146,6 +146,33 @@ class Users
         }
     }
 
+    public function updateUser()
+    {
+        //Process form
+
+        //Sanitize POST data
+        $_POST = filter_input_array(INPUT_POST);
+
+        //Init data
+        $data = [
+            'firstname' => trim($_POST['firstname']),
+            'name' => trim($_POST['name']),
+            'mail' => trim($_SESSION['mail'])
+        ];
+
+        if (empty($data['firstname']) || empty($data['name'])) {
+            flash("profile", "Veuillez remplir tous le champs.");
+            redirect("index.php?cible=users&function=profile");
+        }
+
+        //Register User
+        if ($this->userModel->updateUser($data)) {
+            redirect("index.php?cible=users&function=profile");
+        } else {
+            die("Something went wrong");
+        }
+    }
+
     public function signin()
     {
         //Sanitize POST data
@@ -215,6 +242,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             break;
         case 'change-password':
             $init->changePassword();
+            break;
+        case 'profile';
+            $init->updateUser();
             break;
         default:
             redirect("index.php?cible=infos&function=home");

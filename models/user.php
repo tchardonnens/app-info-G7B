@@ -58,6 +58,21 @@ class User {
         }
     }
 
+    //update user infos
+    public function updateUser($data){
+        $this->db->query('UPDATE users SET `firstname`=:firstname,`name`=:name WHERE `mail`=:mail');
+        //Bind values
+        $this->db->bind(':firstname', $data['firstname']);
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':mail', $data['mail']);
+        //Execute
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     //Login user
     public function signin($email, $password){
         $row = $this->findUserByEmail($email);
