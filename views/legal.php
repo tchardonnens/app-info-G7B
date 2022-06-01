@@ -1,11 +1,6 @@
 <head>
     <link rel="stylesheet" href="styles/legal.css" />
 </head>
-</br>
-</br>
-</br>
-</br>
-</br>
     <h1>Mentions Légales</h1>
     </br>
     <p class="question">Conditions générales de vente CGV</p></br>

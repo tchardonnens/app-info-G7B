@@ -1,11 +1,6 @@
 <head>
     <link rel="stylesheet" href="styles/legal.css" />
 </head>
-</br>
-</br>
-</br>
-</br>
-</br>
     <h1>SAV</h1>
 </br>
     <p class="question">Suivi du produit</p></br>

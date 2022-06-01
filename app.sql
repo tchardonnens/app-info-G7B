@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : lun. 16 mai 2022 à 09:54
+-- Généré le : mer. 01 juin 2022 à 07:28
 -- Version du serveur : 5.7.34
 -- Version de PHP : 7.4.21
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `infinite_measures`
+-- Base de données : `app`
 --
 
 -- --------------------------------------------------------
@@ -88,10 +88,23 @@ CREATE TABLE `sensor_data` (
 
 CREATE TABLE `teams` (
   `id_team` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `building` varchar(255) NOT NULL,
   `floor` int(11) NOT NULL,
   `creation_ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `teams`
+--
+
+INSERT INTO `teams` (`id_team`, `name`, `building`, `floor`, `creation_ts`) VALUES
+(1, 'RH', 'Tour 1', 3, '2022-06-01 05:48:01'),
+(2, 'Compta', 'Tour 1', 4, '2022-06-01 05:48:17'),
+(3, 'R&D', 'Tour 1', 6, '2022-06-01 05:49:16'),
+(4, 'Commerciaux', 'Tour 1', 2, '2022-06-01 05:49:50'),
+(5, 'Communication', 'Tour 1', 4, '2022-06-01 05:50:15'),
+(6, 'Corpos', 'Tour1', 7, '2022-06-01 05:50:38');
 
 -- --------------------------------------------------------
 
@@ -130,10 +143,11 @@ CREATE TABLE `tickets` (
 
 CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `hashed_password` varchar(255) NOT NULL,
-  `profile_picture` varchar(255) DEFAULT NULL,
+  `user_picture` varchar(255) DEFAULT NULL,
   `id_role` int(11) NOT NULL DEFAULT '1',
   `creation_ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -142,15 +156,9 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id_user`, `name`, `mail`, `hashed_password`, `profile_picture`, `id_role`, `creation_ts`) VALUES
-(1, 'Thomas', 'totochardo@gmail.com', '$2y$10$bYsiMlpyGAq61WUSWPLI2.LuV8Xk0zoXpSiZ8ormwCu2cFm6nbYAC', NULL, 1, '2022-05-05 12:44:46'),
-(2, 'Bob', 'bob@test.fr', '$2y$10$h0hdyHkkFyJ7TXbCXRI3lejPaUnkXYXE/ufDG5FjjmOIwxPo4E75S', NULL, 1, '2022-05-05 13:16:02'),
-(3, 'Thomas', 'super@test.fr', '$2y$10$lndfYXt6yQtfzdou4puOp.Ax7uPGLFVSL.IYmgjQZ8PWnVsCIfJyK', NULL, 1, '2022-05-05 15:57:46'),
-(4, 'Bob', 'chardo@test.fr', '$2y$10$YG.f6TfaYkPxQ5rF2VTN6e1uQgQMFiwoOsbevwPDac34mVLIvabK2', NULL, 1, '2022-05-05 22:51:12'),
-(5, 'Thomas', 'test@bowling.fr', '$2y$10$rS0oVuMWEE8lE4tapURH6.shvHSBi.5B6Qe7mEyLplpf.g2aGr3lm', NULL, 1, '2022-05-05 23:03:17'),
-(6, 'Alice', 'test@test.fr', '$2y$10$ozVODoWNkFhZDQ.sZXd2UOaCyNkPhHK0Y35/dZw9YNr.3EDS7R8oK', NULL, 1, '2022-05-06 08:59:24'),
-(7, 'Thomas', 'chardonnens.thomas@protonmail.com', '$2y$10$LCTX40xk8540Prx6kgxhRuEm9hfNHYPdRd9KXjTvXY3qJ8VBZRrbG', NULL, 1, '2022-05-06 11:26:07'),
-(8, 'Marceau', 'test@marceau.fr', '$2y$10$dng8Nx7YeTEo2tFFFd/vRuhQLjpYAmVCNT3rpdVd3qZLtc5IcO.Wa', NULL, 1, '2022-05-06 12:10:11');
+INSERT INTO `users` (`id_user`, `firstname`, `name`, `mail`, `hashed_password`, `user_picture`, `id_role`, `creation_ts`) VALUES
+(9, 'Thomas', 'Chardonnens', 'chardonnens.thomas@protonmail.com', '$2y$10$ebLAfXIzuZk7R8QF2SAH8.7mkpcyh8dYg7hIaa4AJnr9U4iRQ2B6u', NULL, 1, '2022-06-01 04:32:02'),
+(10, 'Tom', 'Brebis', 'test@test.com', '$2y$10$EQvMQDOMupkNpb5Zctp4M..rMLbMNNYzl1CqkvHLF8EmmMdGttiIS', NULL, 1, '2022-06-01 04:38:59');
 
 --
 -- Index pour les tables déchargées
@@ -241,7 +249,7 @@ ALTER TABLE `sensor_data`
 -- AUTO_INCREMENT pour la table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_team` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `teams_users`
@@ -259,7 +267,7 @@ ALTER TABLE `tickets`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Contraintes pour les tables déchargées
