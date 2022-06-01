@@ -27,14 +27,29 @@ class User {
 
     //Register User
     public function signup($data){
-        $this->db->query('INSERT INTO users (`name`, `mail`, `hashed_password`) 
-        VALUES (:name, :mail, :hashed_password)');
+        $this->db->query('INSERT INTO users (`firstname`,`name`, `mail`, `hashed_password`) 
+        VALUES (:firstname, :name, :mail, :hashed_password)');
         //Bind values
+        $this->db->bind(':firstname', $data['firstname']);
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':mail', $data['mail']);
         $this->db->bind(':hashed_password', $data['password']);
 
 
+        //Execute
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //Change password
+    public function changePassword($data){
+        $this->db->query('UPDATE users SET `hashed_password`=:hashed_password WHERE `mail`=:mail');
+        //Bind values
+        $this->db->bind(':hashed_password', $data['password']);
+        $this->db->bind(':mail', $data['mail']);
         //Execute
         if($this->db->execute()){
             return true;

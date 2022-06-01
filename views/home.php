@@ -6,9 +6,7 @@
     <div class="h-stack">
         <div class="v-stack">
             <h1>Présentation</h1>
-            <p class="description">Infinite Measures propose une interface permettant de comprendre votre environnement.
-            Grâce aux différents capteurs et à ce site, vous comprendrez votre environnement et en deviendrez le maître.
-            Notre site comprend une interface ludique vous mettant en compétition avec le restant des participants pour avoir le meilleur environnement de travail.</p>
+            <p class="description">Infinite Measures propose une interface permettant d'afficher et de comprendre les données environnementales de votre espace de travail.</p>
             <div class="h-stack-icons">
                 <div class="v-stack">
                     <img src="./content/new-icons/basic/sound.svg" />
@@ -32,7 +30,7 @@
                 </div>
             </div>
             <h1>Le Challenge</h1>
-            <p class="description">Leaderboard et compétition, nous allons vous faire aimer le bien-être au travail.</p>
+            <p class="description">Une compétition entre les différents open spaces à coup de mesures environnementales...</p>
             <img src="./content/new-icons/basic/medal.svg" />
 
         </div>

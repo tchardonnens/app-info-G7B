@@ -14,15 +14,15 @@ if (!isset($_SESSION['name'])) {
                         ?> </h1>
 <div class="spacer"></div>
 
-<ul id="tabs" class="teste">
-    <li class="selected"><a id="noise" href="#noise">Bruit</a></li>
-    <li><a id="heart" href="#heart">Rythme Cardiaque</a></li>
-    <li><a id="co2" href="#co2">CO2</a></li>
-    <li><a id="tempe" href="#temp">Température</a></li>
-    <li><a id="humidity" href="#humidity">Humidité</a></li>
+<ul id="tabs" class="tabs">
+    <li class="selected"><a id="tab_1" href="#tab_1">Bruit</a></li>
+    <li><a id="tab_2" href="#tab_2">Rythme Cardiaque</a></li>
+    <li><a id="tab_3" href="#tab_3">CO2</a></li>
+    <li><a id="tab_4" href="#tab_4">Température</a></li>
+    <li><a id="tab_5" href="#tab_5">Humidité</a></li>
 </ul>
 <div id="contents">
-    <div id="noise" class="content visual">
+    <div id="content_1" class="content visual">
         <div class="h-stack">
             <div class="chart-container">
                 <canvas id="noiseChart"></canvas>
@@ -30,7 +30,7 @@ if (!isset($_SESSION['name'])) {
         </div>
         <div class="spacer"></div>
     </div>
-    <div id="heart" class="content">
+    <div id="content_2" class="content">
         <div class="h-stack">
             <div class="chart-container">
                 <canvas id="heartChart"></canvas>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['name'])) {
         </div>
         <div class="spacer"></div>
     </div>
-    <div id="co2" class="content">
+    <div id="content_3" class="content">
         <div class="h-stack">
             <div class="chart-container">
                 <canvas id="co2Chart"></canvas>
@@ -46,7 +46,7 @@ if (!isset($_SESSION['name'])) {
         </div>
         <div class="spacer"></div>
     </div>
-    <div id="temperature" class="content">
+    <div id="content_4" class="content">
         <div class="h-stack">
             <div class="chart-container">
                 <canvas id="tempChart"></canvas>
@@ -54,7 +54,7 @@ if (!isset($_SESSION['name'])) {
         </div>
         <div class="spacer"></div>
     </div>
-    <div id="humidity" class="content">
+    <div id="content_5" class="content">
         <div class="h-stack">
             <div class="chart-container">
                 <canvas id="humidityChart"></canvas>

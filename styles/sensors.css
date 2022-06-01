@@ -20,29 +20,29 @@ h1 {
   height: 40vh;
 }
 
-.tabs {
+#tabs {
   margin: 0;
   padding: 0;
 }
-.tabs li {
+#tabs li {
   display: inline-block;
   border: 1px solid #cccccc;
   border-bottom: none;
   background-color: #eeeeee;
 }
-.tabs li a {
+#tabs li a {
   padding: 10px 20px;
   display: block;
   text-decoration: none;
   color: #000000;
 }
-.tabs li.selected {
+#tabs li.selected {
   background-color: #ffffff;
   position: relative;
   top: 1px;
   font-weight: bold;
 }
-.tabs li.selected a {
+#tabs li.selected a {
   padding-top: 11px;
 }
 .content {

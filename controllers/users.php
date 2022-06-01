@@ -22,27 +22,50 @@ class Users
 
         //Init data
         $data = [
+            'firstname' => trim($_POST['firstname']),
             'name' => trim($_POST['name']),
             'mail' => trim($_POST['mail']),
             'password' => trim($_POST['password']),
             'pwdRepeat' => trim($_POST['pwdRepeat'])
         ];
 
-        if (empty($data['mail']) || empty($data['password']) || empty($data['pwdRepeat'])) {
-            flash("signup", "Please fill out all inputs");
+        if (empty($data['firstname']) || empty($data['mail']) || empty($data['name']) || empty($data['password']) || empty($data['pwdRepeat'])) {
+            flash("signup", "Veuillez remplir tous le champs.");
             redirect("index.php?cible=users&function=signup");
         }
 
         if (!filter_var($data['mail'], FILTER_VALIDATE_EMAIL)) {
-            flash("signup", "Invalid email");
+            flash("signup", "Adresse email non valide.");
             redirect("index.php?cible=users&function=signup");
         }
 
-        if (strlen($data['password']) < 6) {
-            flash("signup", "Invalid password");
+        if (strlen($data['password']) < 6 ) {
+            flash("signup", "Ce mot de passe est trop court.");
             redirect("index.php?cible=users&function=signup");
-        } else if ($data['password'] !== $data['pwdRepeat']) {
-            flash("signup", "Passwords don't match");
+        } 
+        
+        if ($data['password'] !== $data['pwdRepeat']) {
+            flash("signup", "Les mots de passe sont différents.");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        if (!preg_match("#[0-9]+#", $data['password'])) {
+            flash("signup", "Le mot de passe doit inclure au moins un chiffre.");
+            redirect("index.php?cible=users&function=signup");
+        }
+    
+        if (!preg_match("#[a-zA-Z]+#", $data['password'])) {
+            flash("signup", "Le mot de passe doit inclure au moins une lettre.");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        if (!preg_match("#[A-Z]+#", $data['password'])) {
+            flash("signup", "Le mot de passe doit inclure au moins une lettre majuscule.");
+            redirect("index.php?cible=users&function=signup");
+        }
+
+        if (!preg_match("#[@/_!]+#", $data['password'])) {
+            flash("signup", "Le mot de passe doit inclure au moins un caractère spécial ([@/_!])");
             redirect("index.php?cible=users&function=signup");
         }
 
@@ -58,8 +81,66 @@ class Users
 
         //Register User
         if ($this->userModel->signup($data)) {
-
             redirect("index.php?cible=infos&function=home");
+        } else {
+            die("Something went wrong");
+        }
+    }
+
+    public function changePassword()
+    {
+        //Sanitize POST data
+        $_POST = filter_input_array(INPUT_POST);
+
+        //Init data
+        $data = [
+            'password' => trim($_POST['password']),
+            'pwdRepeat' => trim($_POST['pwdRepeat'])
+        ];
+
+        if (empty($data['password']) || empty($data['pwdRepeat'])) {
+            flash("change-password", "Veuillez remplir tous le champs.");
+            redirect("index.php?cible=users&function=change-password");
+        }
+
+        if (strlen($data['password']) < 6 ) {
+            flash("change-password", "Ce mot de passe est trop court.");
+            redirect("index.php?cible=users&function=change-password");
+        } 
+        
+        if ($data['password'] !== $data['pwdRepeat']) {
+            flash("change-password", "Les mots de passe sont différents.");
+            redirect("index.php?cible=users&function=change-password");
+        }
+
+        if (!preg_match("#[0-9]+#", $data['password'])) {
+            flash("change-password", "Le mot de passe doit inclure au moins un chiffre.");
+            redirect("index.php?cible=users&function=change-password");
+        }
+    
+        if (!preg_match("#[a-zA-Z]+#", $data['password'])) {
+            flash("change-password", "Le mot de passe doit inclure au moins une lettre.");
+            redirect("index.php?cible=users&function=change-password");
+        }
+
+        if (!preg_match("#[A-Z]+#", $data['password'])) {
+            flash("change-password", "Le mot de passe doit inclure au moins une lettre majuscule.");
+            redirect("index.php?cible=users&function=change-password");
+        }
+
+        if (!preg_match("#[@/_!]+#", $data['password'])) {
+            flash("change-password", "Le mot de passe doit inclure au moins un caractère spécial ([@/_!])");
+            redirect("index.php?cible=users&function=change-password");
+        }
+
+        //Passed all validation checks.
+        //Now going to hash password
+        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+        $data['mail'] = $_SESSION['mail'];
+
+        //Register User
+        if ($this->userModel->changePassword($data)) {
+            redirect("index.php?cible=users&function=change-password");
         } else {
             die("Something went wrong");
         }
@@ -102,8 +183,11 @@ class Users
 
     public function createUserSession($user)
     {
+        $_SESSION['firstname'] = $user->firstname;
         $_SESSION['mail'] = $user->mail;
         $_SESSION['name'] = $user->name;
+        $_SESSION['profile_picture'] = $user->profile_picture;
+        $_SESSION['id_role'] = $user->id_role;
         redirect("index.php?cible=infos&function=home");
     }
 
@@ -111,6 +195,8 @@ class Users
     {
         unset($_SESSION['name']);
         unset($_SESSION['mail']);
+        unset($_SESSION['profile_picture']);
+        unset($_SESSION['id_role']);
         session_destroy();
         redirect("index.php?cible=infos&function=home");
     }
@@ -126,6 +212,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             break;
         case 'signin':
             $init->signin();
+            break;
+        case 'change-password':
+            $init->changePassword();
             break;
         default:
             redirect("index.php?cible=infos&function=home");
@@ -169,6 +258,11 @@ switch ($function) {
     case 'profile':
         $vue = "profile";
         $title = "Mon profil";
+        break;
+
+    case 'change-password':
+        $vue = "change-password";
+        $title = "Nouveau mot de passe";
         break;
     
     case 'messages':

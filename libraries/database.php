@@ -7,9 +7,9 @@
     * Return rows and results
 */
 class Database {
-    private $host = 'localhost:3306';
+    private $host = 'localhost:8889';
     private $user = 'root';
-    private $pass = '';
+    private $pass = 'root';
     private $dbname = 'app';
 
     //Will be the PDO object

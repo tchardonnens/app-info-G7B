@@ -13,3 +13,10 @@ img {
 .h-stack {
     justify-content: space-evenly;
 }
+
+.account-link {
+    padding-bottom: 10vh;
+    margin-top: 50px;
+    color: #6960BB;
+    margin-right: 0 !important;
+}

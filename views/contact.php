@@ -6,7 +6,7 @@
 <div class="column-container">
     <img class="mail" src="content/new-icons/basic/mail.svg" />
     <p>Contacter l’administrateur par mail :</p>
-    <p style="font-weight:bold">help@infinite-measures.com</p>
+    <p style="font-weight:bold">service@noledge.app</p>
 </div>
 <div class="column-container">
     <img class="message" src="content/new-icons/basic/messages.svg">
