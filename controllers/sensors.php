@@ -1,13 +1,27 @@
 <?php
+require_once('./models/sensor.php');
+require_once('./models/sensorData.php');
 
-/**
- * Contrôleur des capteurs
- */
+class Sensors
+{
+    private $sensorModel;
 
-// on inclut le fichier modèle contenant les appels à la BDD
-include('./models/requests.sensors.php');
+    public function __construct()
+    {
+        $this->sensorModel = new Sensor;
+    }
 
-// si la fonction n'est pas définie, on choisit d'afficher l'accueil
+    public function findAllSensors()
+    {
+        $list = $this->sensorModel->findAllSensors();
+        if (empty($list)) {
+            flash("sensors", "Aucun capteur n'a été enregistré.");
+            header("location: index.php?cible=users&function=sensors");
+        }
+        return $list;
+    }
+}
+
 if (!isset($_GET['function']) || empty($_GET['function'])) {
     $function = "sensors";
 } else {
@@ -15,49 +29,47 @@ if (!isset($_GET['function']) || empty($_GET['function'])) {
 }
 
 switch ($function) {
-    
+
     case 'sensors':
         //liste des capteurs enregistrés
-        
+
         $vue = "sensors";
         $title = "Les capteurs";
-        
+
         $entete = "Voici la liste des capteurs déjà enregistrés :";
-        
-        $liste = recupereTous($bdd, $table);
-        
-        if(empty($liste)) {
+
+        $liste = $init->findAllSensors();
+
+        if (empty($liste)) {
             $alerte = "Aucun capteur enregistré pour le moment";
         }
-        
+
         break;
-        
+
     case 'add':
         //Ajouter un nouveau capteur
-        
+
         $title = "Ajouter un capteur";
         $vue = "add";
         $alerte = false;
-        
+
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['name']) and isset($_POST['type'])) {
-            
-            if( !estUneChaine($_POST['name'])) {
+
+            if (!estUneChaine($_POST['name'])) {
                 $alerte = "Le nom du capteur doit être une chaîne de caractère.";
-                
-            } else if( !estUneChaine($_POST['type'])) {
+            } else if (!estUneChaine($_POST['type'])) {
                 $alerte = "Le type du capteur doit être une chaîne de caractère.";
-                
             } else {
-                
+
                 $values =  [
                     'name' => $_POST['name'],
                     'type' => $_POST['type']
                 ];
-                
+
                 // Appel à la BDD à travers une fonction du modèle.
                 $retour = insertion($bdd, $values, $table);
-                
+
                 if ($retour) {
                     $alerte = "Ajout réussie";
                 } else {
@@ -65,34 +77,33 @@ switch ($function) {
                 }
             }
         }
-        
+
         break;
-        
+
     case 'recherche':
         // chercher des capteurs par type
-        
+
         $title = "Rechercher des capteurs";
         $alerte = false;
         $vue = "recherche";
-        
+
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['type'])) {
-            
-            if( !estUneChaine($_POST['type'])) {
+
+            if (!estUneChaine($_POST['type'])) {
                 $alerte = "Le type du capteur doit être une chaîne de caractère.";
-                
             } else {
-                
-                $liste = rechercheParType($bdd, $table, $_POST['type']);
-                
-                if(empty($liste)) {
+
+                $list = findByType($sensor_type);
+
+                if (empty($list)) {
                     $alerte = "Aucun capteur ne correspond à votre recherche";
                 }
             }
         }
-        
+
         break;
-        
+
     default:
         // si aucune fonction ne correspond au paramètre function passé en GET
         $vue = "erreur404";
@@ -100,6 +111,6 @@ switch ($function) {
         $message = "Erreur 404 : la page recherchée n'existe pas.";
 }
 
-include ('views/header.php');
-include ('views/' . $vue . '.php');
-include ('views/footer.php');
+include('views/header.php');
+include('views/' . $vue . '.php');
+include('views/footer.php');

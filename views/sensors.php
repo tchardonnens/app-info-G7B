@@ -2,6 +2,7 @@
 if (!isset($_SESSION['name'])) {
     header("Location: index.php?cible=users&function=signin");
 }
+include_once 'helpers/session_helper.php';
 ?>
 
 <head>

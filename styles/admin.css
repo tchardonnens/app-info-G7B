@@ -1,0 +1,31 @@
+h1 {
+  color: #6960BB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 30vh;
+}
+
+.h-stack {
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.account-link {
+  padding-bottom: 10vh;
+  margin-top: 50px;
+  color: #6960BB;
+  margin-right: 0 !important;
+}
+
+input {
+  padding: 1vh 1vh 1vh 1vh;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: grey;
+  width: 20vw;
+}
