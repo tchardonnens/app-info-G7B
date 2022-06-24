@@ -28,7 +28,7 @@ class Sensor
   }
 
   //Find sensor by name
-  public function findSensorByName($name)
+  public function findSensorByType($name)
   {
     $this->db->query('SELECT * FROM sensors WHERE sensor_type = :name');
     $this->db->bind(':name', $name);
